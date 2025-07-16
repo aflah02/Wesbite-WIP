@@ -1,0 +1,57 @@
+{
+  "personal": {
+    "name": "Mohammad Aflah Khan",
+    "title": "Research Software Engineer @ MPI-SWS · OSS @ EleutherAI",
+    "description": "Hi, I'm Aflah, a research software engineer at the Max Planck Institute for Software Systems. My work centers on deepening our understanding of large language models (LLMs) and rigorously evaluating their capabilities. I'm also passionate about the systems side of LLMs, with hands-on experience in large-scale pretraining and inference. In the past, I've contributed to projects targeting hate speech reduction and other NLP applications for social good.",
+    "photo": "Assets/avatar.jpg"
+  },
+  "social_links": {
+    "linkedin": "https://www.linkedin.com/in/mohammad-aflah-khan",
+    "twitter": "http://twitter.com/aflah02101",
+    "google_scholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&user=IM_mP38AAAAJ",
+    "substack": "https://aflah02.substack.com/",
+    "semantic_scholar": "https://www.semanticscholar.org/author/Mohammad-Aflah-Khan/2168771748",
+    "youtube": "https://www.youtube.com/channel/UCwab-Xf38Sd7QsxVPoS0cgA",
+    "github": "https://github.com/aflah02",
+    "website": "https://aflah02.github.io/"
+  },
+  "featured_publications": [
+    {
+      "title": "Title of Your Important FFFF",
+      "authors": "Your Name, Co-Author Name",
+      "venue": "Journal/Conference Name, 2024",
+      "description": "Brief description of your research and its significance. This should be a concise summary that highlights the key contributions and impact of your work.",
+      "links": {
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "data": "",
+        "slides": "",
+        "video": "",
+        "poster": ""
+      }
+    },
+    {
+      "title": "Another Significant Research Work",
+      "authors": "Your Name, Collaborator A, Collaborator B",
+      "venue": "Top Venue Conference, 2023",
+      "description": "Another brief description highlighting the innovation and impact of this research. Focus on what makes this work unique and valuable to the field.",
+      "links": {
+        "pdf": "",
+        "doi": "",
+        "slides": ""
+      }
+    },
+    {
+      "title": "Innovative Method for [Your Field]",
+      "authors": "Your Name, Research Team",
+      "venue": "Leading Journal, 2023",
+      "description": "Description of a breakthrough or novel approach you've developed. Emphasize the practical applications and theoretical contributions.",
+      "links": {
+        "pdf": "",
+        "doi": "",
+        "data": ""
+      }
+    }
+  ]
+}

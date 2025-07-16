@@ -1,22 +1,23 @@
 # Personal Portfolio Data
 personal:
-  name: "Your Name"
-  title: "Your Professional Title"
-  description: "Welcome to my portfolio! I'm a [your profession] passionate about [your field/interests]. Here you'll find my research, projects, and professional journey."
-  photo: "https://via.placeholder.com/300x300/4f46e5/ffffff?text=Your+Photo"
+  name: "Mohammad Aflah Khan"
+  title: "Research Software Engineer @ MPI-SWS · OSS @ EleutherAI"
+  description: "Hi, I’m Aflah, a research software engineer at the Max Planck Institute for Software Systems. My work centers on deepening our understanding of large language models (LLMs) and rigorously evaluating their capabilities. I’m also passionate about the systems side of LLMs, with hands-on experience in large-scale pretraining and inference. In the past, I’ve contributed to projects targeting hate speech reduction and other NLP applications for social good."
+  photo: "Assets/avatar.jpeg"
 
 social_links:
-  linkedin: ""
-  twitter: ""
-  google_scholar: ""
-  substack: ""
-  semantic_scholar: ""
-  youtube: ""
-  github: ""
+  linkedin: "https://www.linkedin.com/in/mohammad-aflah-khan"
+  twitter: "http://twitter.com/aflah02101"
+  google_scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=IM_mP38AAAAJ"
+  substack: "https://aflah02.substack.com/"
+  semantic_scholar: "https://www.semanticscholar.org/author/Mohammad-Aflah-Khan/2168771748"
+  youtube: "https://www.youtube.com/channel/UCwab-Xf38Sd7QsxVPoS0cgA"
+  github: "https://github.com/aflah02"
+  website: "https://aflah02.github.io/"
 
 # Featured Publications (for homepage)
 featured_publications:
-  - title: "Title of Your Important Paper"
+  - title: "Title of Your fff Paper"
     authors: "Your Name, Co-Author Name"
     venue: "Journal/Conference Name, 2024"
     description: "Brief description of your research and its significance. This should be a concise summary that highlights the key contributions and impact of your work."

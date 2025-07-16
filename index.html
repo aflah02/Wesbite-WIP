@@ -12,17 +12,6 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" class="social-link" title="Substack"><i class="fas fa-newspaper"></i></a>
-                <a href="#" class="social-link" title="Semantic Scholar"><i class="fas fa-book-open"></i></a>
-                <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-            
             <!-- Navigation Links -->
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Home</a>
@@ -54,13 +43,24 @@
                         Welcome to my portfolio! I'm a [your profession] passionate about [your field/interests]. 
                         Here you'll find my research, projects, and professional journey.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#publications" class="btn btn-primary">View Publications</a>
-                        <a href="education.html" class="btn btn-secondary">My Background</a>
-                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="https://via.placeholder.com/300x300/4f46e5/ffffff?text=Your+Photo" alt="Your Name" class="profile-photo">
+                </div>
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="hero-social">
+                <div class="social-icons">
+                    <!-- Complete social media links -->
+                    <a href="https://www.linkedin.com/in/mohammad-aflah-khan" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="http://twitter.com/aflah02101" class="social-link" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=IM_mP38AAAAJ" class="social-link" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://aflah02.substack.com/" class="social-link" title="Substack" target="_blank"><i class="fas fa-newspaper"></i></a>
+                    <a href="https://www.semanticscholar.org/author/Mohammad-Aflah-Khan/2168771748" class="social-link" title="Semantic Scholar" target="_blank"><i class="fas fa-book-open"></i></a>
+                    <a href="https://www.youtube.com/channel/UCwab-Xf38Sd7QsxVPoS0cgA" class="social-link" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/aflah02" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://aflah02.github.io/" class="social-link" title="Website" target="_blank"><i class="fas fa-globe"></i></a>
                 </div>
             </div>
         </section>
@@ -224,6 +224,92 @@
     </footer>
 
     <script src="data-loader.js"></script>
+    <script>
+        // Initialize and load data properly
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('Starting data load...');
+            
+            try {
+                const portfolioData = new PortfolioData();
+                const data = await portfolioData.loadData();
+                
+                console.log('Data loaded:', data);
+                
+                if (data) {
+                    // Update personal information
+                    if (data.personal) {
+                        console.log('Updating personal info...');
+                        
+                        // Update title
+                        document.title = `${data.personal.name} - Personal Portfolio`;
+                        
+                        // Update hero section
+                        const heroTitle = document.querySelector('.hero-title');
+                        const heroSubtitle = document.querySelector('.hero-subtitle');
+                        const heroDescription = document.querySelector('.hero-description');
+                        const profilePhoto = document.querySelector('.profile-photo');
+                        
+                        if (heroTitle) {
+                            heroTitle.textContent = data.personal.name;
+                            console.log('Updated hero title');
+                        }
+                        if (heroSubtitle) {
+                            heroSubtitle.textContent = data.personal.title;
+                            console.log('Updated hero subtitle');
+                        }
+                        if (heroDescription) {
+                            heroDescription.textContent = data.personal.description;
+                            console.log('Updated hero description');
+                        }
+                        if (profilePhoto) {
+                            console.log('Updating profile photo from:', profilePhoto.src, 'to:', data.personal.photo);
+                            profilePhoto.src = data.personal.photo;
+                            profilePhoto.alt = data.personal.name;
+                            
+                            // Add error handling for image loading
+                            profilePhoto.onerror = function() {
+                                console.error('Failed to load image:', data.personal.photo);
+                                console.log('Falling back to placeholder image');
+                                this.src = 'https://via.placeholder.com/300x300/4f46e5/ffffff?text=' + encodeURIComponent(data.personal.name.split(' ').map(n => n[0]).join(''));
+                            };
+                            
+                            profilePhoto.onload = function() {
+                                console.log('Profile photo loaded successfully');
+                            };
+                            
+                            console.log('Updated profile photo');
+                        }
+                        
+                        // Update footer
+                        const footerText = document.querySelector('.footer p');
+                        if (footerText) {
+                            footerText.innerHTML = `&copy; 2025 ${data.personal.name}. All rights reserved.`;
+                            console.log('Updated footer');
+                        }
+                    }
+                    
+                    // Update social links if they exist
+                    if (data.social_links) {
+                        console.log('Updating social links...');
+                        const socialContainer = document.querySelector('.social-icons');
+                        if (socialContainer) {
+                            const socialHTML = portfolioData.renderSocialLinks(data.social_links);
+                            if (socialHTML) {
+                                socialContainer.innerHTML = socialHTML;
+                                console.log('Updated social links');
+                            }
+                        }
+                    }
+                    
+                    console.log('Data population complete!');
+                } else {
+                    console.error('No data loaded');
+                }
+            } catch (error) {
+                console.error('Error in data loading:', error);
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

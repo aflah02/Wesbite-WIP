@@ -5,12 +5,12 @@ class PortfolioData {
         this.data = null;
     }
 
-    // Load YAML data
+    // Load data (JSON for now, can be switched back to YAML later)
     async loadData() {
         try {
-            const response = await fetch('data.yaml');
-            const yamlText = await response.text();
-            this.data = this.parseYAML(yamlText);
+            const response = await fetch('data.json');
+            const data = await response.json();
+            this.data = data;
             return this.data;
         } catch (error) {
             console.error('Error loading data:', error);
@@ -247,7 +247,8 @@ class PortfolioData {
             substack: 'fas fa-newspaper',
             semantic_scholar: 'fas fa-book-open',
             youtube: 'fab fa-youtube',
-            github: 'fab fa-github'
+            github: 'fab fa-github',
+            website: 'fas fa-globe'
         };
 
         const socialTitles = {
@@ -257,16 +258,18 @@ class PortfolioData {
             substack: 'Substack',
             semantic_scholar: 'Semantic Scholar',
             youtube: 'YouTube',
-            github: 'GitHub'
+            github: 'GitHub',
+            website: 'Website'
         };
 
         return Object.keys(socialLinks).map(platform => {
             const url = socialLinks[platform];
+            // Only render links that have actual URLs (not empty strings)
             if (!url || !url.trim()) {
-                return `<a href="#" class="social-link" title="${socialTitles[platform]}"><i class="${socialIcons[platform]}"></i></a>`;
+                return '';
             }
             return `<a href="${url}" class="social-link" title="${socialTitles[platform]}" target="_blank"><i class="${socialIcons[platform]}"></i></a>`;
-        }).join('');
+        }).filter(link => link !== '').join('');
     }
 
     // Utility function to render education timeline

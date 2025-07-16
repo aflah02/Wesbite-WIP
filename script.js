@@ -30,9 +30,13 @@ function populatePageData(data) {
 
     // Populate social links
     if (data.social_links) {
+        console.log('Social links data:', data.social_links);
         const socialContainer = document.querySelector('.social-icons');
+        console.log('Social container found:', socialContainer);
         if (socialContainer) {
-            socialContainer.innerHTML = portfolioData.renderSocialLinks(data.social_links);
+            const socialHTML = portfolioData.renderSocialLinks(data.social_links);
+            console.log('Generated social HTML:', socialHTML);
+            socialContainer.innerHTML = socialHTML;
         }
     }
 
@@ -207,17 +211,29 @@ function reinitializeEventListeners() {
     });
 }
 
-// Load data and initialize the page
+// Initialize portfolio data handler (moved to individual pages)
+// const portfolioData = new PortfolioData();
+
+// Load data and initialize the page (moved to individual pages)
+/*
 document.addEventListener('DOMContentLoaded', async function() {
-    // Load YAML data
+    console.log('DOM Content Loaded - starting data load');
+    
+    // Load JSON data
     const data = await portfolioData.loadData();
     
+    console.log('Data loaded:', data);
+    
     if (data) {
+        console.log('Populating page data...');
         populatePageData(data);
+    } else {
+        console.error('Failed to load data');
     }
 
     // Continue with existing initialization code...
 });
+*/
 
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
@@ -480,13 +496,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     socialLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Prevent default if no href is set (placeholder links)
-            if (this.getAttribute('href') === '#') {
-                e.preventDefault();
-                const platform = this.getAttribute('title');
-                alert(`${platform} link would open here. Please update the href attribute with your actual profile URL.`);
-            }
-            
             // Analytics tracking would go here
             // Example: gtag('event', 'social_click', { platform: platform });
         });
