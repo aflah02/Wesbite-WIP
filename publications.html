@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" class="social-link" title="Substack"><i class="fas fa-newspaper"></i></a>
+                <a href="#" class="social-link" title="Semantic Scholar"><i class="fas fa-book-open"></i></a>
+                <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="education.html" class="nav-link">Education & Career</a>
+                <a href="publications.html" class="nav-link active">Publications</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="service.html" class="nav-link">Service</a>
+                <a href="awards.html" class="nav-link">Awards</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content page-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Publications</h1>
+                <p class="page-subtitle">Complete list of my research publications and contributions</p>
+            </div>
+        </section>
+
+        <!-- Publication Filters -->
+        <section class="publication-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Publications</button>
+                    <button class="filter-btn" data-filter="conference">Conference Papers</button>
+                    <button class="filter-btn" data-filter="workshop">Workshop Papers</button>
+                    <button class="filter-btn" data-filter="extended">Extended Abstracts</button>
+                    <button class="filter-btn" data-filter="preprint">Preprints</button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search publications...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications List -->
+        <section class="publications-list">
+            <div class="container">
+                <div class="publications-container">
+                <!-- 2024 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2024</h2>
+                    
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">25.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Advanced Methods in [Your Research Area]: A Comprehensive Study</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Collaborator A., Collaborator B., & Senior Author C.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>International Conference on Machine Learning (ICML)</strong>, 2024
+                            </p>
+                            <p class="publication-abstract">
+                                This paper presents novel computational methods for addressing fundamental challenges in [your field]. 
+                                Our approach demonstrates significant improvements over existing state-of-the-art techniques, achieving 
+                                25% better performance on standard benchmarks.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-database"></i> Data</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">24.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Scalable Framework for Large-Scale [Application Domain]</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Research Partner D., & Team Lead E.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Proceedings of the International Conference on Machine Learning (ICML)</strong>, 2024
+                            </p>
+                            <p class="publication-abstract">
+                                We introduce a scalable framework that handles large-scale datasets efficiently. The framework 
+                                incorporates novel optimization techniques and distributed computing principles to achieve 
+                                unprecedented scalability in [specific application].
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Slides</a>
+                                <a href="#" class="pub-link"><i class="fas fa-video"></i> Video</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2023 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2023</h2>
+                    
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">23.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Deep Learning Approaches for [Specific Problem]: Theory and Applications</h3>
+                            <p class="publication-authors">
+                                Collaborator F., <strong>Your Name</strong>, & Supervisor G.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Conference on Neural Information Processing Systems (NeurIPS)</strong>, 2023
+                            </p>
+                            <p class="publication-abstract">
+                                This work establishes theoretical foundations for applying deep learning to [specific problem domain]. 
+                                We provide both theoretical analysis and practical implementations, showing significant improvements 
+                                in accuracy and computational efficiency.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-database"></i> Data</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="workshop">
+                        <div class="publication-number">22.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Novel Architecture for Real-Time [Application]</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Student H., & Collaborator I.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Workshop on Emerging Technologies at ICML</strong>, 2023
+                            </p>
+                            <p class="publication-abstract">
+                                We present a novel neural architecture designed for real-time applications. The architecture 
+                                balances accuracy and computational efficiency, making it suitable for deployment in 
+                                resource-constrained environments.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Poster</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">21.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Comprehensive Survey of [Research Area]: Current State and Future Directions</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong> & Senior Researcher J.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>International Conference on Computer Vision (ICCV)</strong>, 2023
+                            </p>
+                            <p class="publication-abstract">
+                                This comprehensive survey reviews the current state of [research area], analyzing over 200 recent 
+                                publications. We identify key trends, challenges, and promising future research directions, 
+                                providing a roadmap for the research community.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fas fa-database"></i> Bibliography</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2022 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2022</h2>
+                    
+                    <article class="publication-item" data-type="preprint">
+                        <div class="publication-number">20.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Emerging Trends in [Field]: A Methodological Innovation</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Postdoc K., & PI L.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>arXiv preprint</strong> arXiv:2022.12345, 2022
+                            </p>
+                            <p class="publication-abstract">
+                                This preprint introduces a methodological innovation that addresses current limitations in [field]. 
+                                The proposed method shows promising results and is currently under review at a top-tier venue.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="workshop">
+                        <div class="publication-number">19.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Lightweight Models for Edge Computing Applications</h3>
+                            <p class="publication-authors">
+                                Student M., <strong>Your Name</strong>, & Industry Partner N.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Workshop on Efficient Deep Learning at NeurIPS</strong>, 2022
+                            </p>
+                            <p class="publication-abstract">
+                                We propose lightweight deep learning models specifically designed for edge computing scenarios. 
+                                Our models achieve competitive performance while maintaining low computational overhead 
+                                and memory footprint.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Slides</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">18.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Scalable Training Methods for Large Neural Networks</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Research Team O., & Lead Scientist P.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>International Conference on Learning Representations (ICLR)</strong>, 2022
+                            </p>
+                            <p class="publication-abstract">
+                                This work addresses the challenges of training large neural networks efficiently. We introduce 
+                                novel optimization techniques that reduce training time while maintaining model quality, 
+                                enabling practical deployment of large-scale models.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-database"></i> Data</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2021 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2021</h2>
+                    
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">17.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Robust Machine Learning Under Distribution Shift</h3>
+                            <p class="publication-authors">
+                                Collaborator Q., <strong>Your Name</strong>, & Senior Author R.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>International Conference on Machine Learning (ICML)</strong>, 2021
+                            </p>
+                            <p class="publication-abstract">
+                                We investigate the robustness of machine learning models when deployed in environments different 
+                                from their training distribution. Our proposed techniques improve model reliability and 
+                                performance in real-world scenarios.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Slides</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="extended">
+                        <div class="publication-number">16.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Privacy-Preserving Learning in Federated Settings</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, PhD Student S., & Advisor T.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Extended Abstract at Conference on Computer and Communications Security (CCS)</strong>, 2021
+                            </p>
+                            <p class="publication-abstract">
+                                We propose novel methods for maintaining privacy while enabling collaborative learning across 
+                                multiple institutions. Our approach balances privacy guarantees with model performance, 
+                                enabling secure knowledge sharing.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Poster</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="extended">
+                        <div class="publication-number">15.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Interpretable AI for Healthcare Applications</h3>
+                            <p class="publication-authors">
+                                Collaborator U., <strong>Your Name</strong>, & Medical Expert V.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Extended Abstract at International Conference on Medical Image Computing (MICCAI)</strong>, 2021
+                            </p>
+                            <p class="publication-abstract">
+                                This extended abstract presents our ongoing work on developing interpretable machine learning 
+                                models for healthcare applications, focusing on providing clinicians with actionable insights 
+                                while maintaining high diagnostic accuracy.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Poster</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2020 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2020</h2>
+                    
+                    <article class="publication-item" data-type="extended">
+                        <div class="publication-number">14.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Neural Architecture Search for Resource-Constrained Devices</h3>
+                            <p class="publication-authors">
+                                <strong>Your Name</strong>, Junior Researcher W., & Industry Partner X.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>Extended Abstract at International Conference on Learning Representations (ICLR)</strong>, 2020
+                            </p>
+                            <p class="publication-abstract">
+                                We explore automated neural architecture search techniques specifically designed for 
+                                resource-constrained edge devices. Our preliminary results show promising directions 
+                                for efficient model design in mobile computing scenarios.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-presentation"></i> Poster</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item" data-type="conference">
+                        <div class="publication-number">13.</div>
+                        <div class="publication-details">
+                            <h3 class="publication-title">Multi-Modal Learning for Complex Scene Understanding</h3>
+                            <p class="publication-authors">
+                                Research Team Y., <strong>Your Name</strong>, & Principal Investigator Z.
+                            </p>
+                            <p class="publication-venue">
+                                <strong>European Conference on Computer Vision (ECCV)</strong>, 2020
+                            </p>
+                            <p class="publication-abstract">
+                                This work addresses the challenge of understanding complex scenes by leveraging multiple 
+                                modalities including visual, textual, and audio information. Our unified framework 
+                                demonstrates improved performance across various scene understanding tasks.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="pub-link"><i class="fas fa-database"></i> Data</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="data-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

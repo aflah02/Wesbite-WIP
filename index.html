@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" class="social-link" title="Substack"><i class="fas fa-newspaper"></i></a>
+                <a href="#" class="social-link" title="Semantic Scholar"><i class="fas fa-book-open"></i></a>
+                <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="education.html" class="nav-link">Education & Career</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="service.html" class="nav-link">Service</a>
+                <a href="awards.html" class="nav-link">Awards</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Your Name</h1>
+                    <h2 class="hero-subtitle">Your Professional Title</h2>
+                    <p class="hero-description">
+                        Welcome to my portfolio! I'm a [your profession] passionate about [your field/interests]. 
+                        Here you'll find my research, projects, and professional journey.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#publications" class="btn btn-primary">View Publications</a>
+                        <a href="education.html" class="btn btn-secondary">My Background</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/300x300/4f46e5/ffffff?text=Your+Photo" alt="Your Name" class="profile-photo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Select Publications Section -->
+        <section id="publications" class="featured-publications">
+            <div class="container">
+                <h2 class="section-title">Select Publications</h2>
+                <div class="publications-grid">
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Title of Your Important Paper</h3>
+                            <p class="publication-authors">Your Name, Co-Author Name</p>
+                            <p class="publication-venue">Journal/Conference Name, 2024</p>
+                            <p class="publication-description">
+                                Brief description of your research and its significance. This should be a concise summary 
+                                that highlights the key contributions and impact of your work.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                                <a href="#" class="pub-link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Another Significant Research Work</h3>
+                            <p class="publication-authors">Your Name, Collaborator A, Collaborator B</p>
+                            <p class="publication-venue">Top Venue Conference, 2023</p>
+                            <p class="publication-description">
+                                Another brief description highlighting the innovation and impact of this research. 
+                                Focus on what makes this work unique and valuable to the field.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                                <a href="#" class="pub-link">Slides</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Innovative Method for [Your Field]</h3>
+                            <p class="publication-authors">Your Name, Research Team</p>
+                            <p class="publication-venue">Leading Journal, 2023</p>
+                            <p class="publication-description">
+                                Description of a breakthrough or novel approach you've developed. Emphasize the 
+                                practical applications and theoretical contributions.
+                            </p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">DOI</a>
+                                <a href="#" class="pub-link">Data</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="view-all-link">
+                    <a href="publications.html" class="btn btn-outline">View All Publications</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Updates Section -->
+        <section class="recent-updates">
+            <div class="container">
+                <h2 class="section-title">Recent Updates</h2>
+                
+                <!-- Update Filters -->
+                <div class="update-filters">
+                    <div class="update-filter-buttons">
+                        <button class="update-filter-btn active" data-filter="all">All</button>
+                        <button class="update-filter-btn" data-filter="papers">Papers</button>
+                        <button class="update-filter-btn" data-filter="talks">Talks</button>
+                        <button class="update-filter-btn" data-filter="career">Career Updates</button>
+                    </div>
+                </div>
+                
+                <div class="updates-container">
+                    <div class="updates-timeline">
+                        <div class="update-item" data-type="papers">
+                            <div class="update-date">Jan 2025</div>
+                            <div class="update-content">
+                                <h3>New Paper Accepted</h3>
+                                <p>Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="talks">
+                            <div class="update-date">Dec 2024</div>
+                            <div class="update-content">
+                                <h3>Conference Presentation</h3>
+                                <p>Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="career">
+                            <div class="update-date">Nov 2024</div>
+                            <div class="update-content">
+                                <h3>Award Recognition</h3>
+                                <p>Honored to receive the [Award Name] for [achievement/contribution].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="career">
+                            <div class="update-date">Oct 2024</div>
+                            <div class="update-content">
+                                <h3>New Collaboration</h3>
+                                <p>Started an exciting collaboration with [Institution/Company] on [project topic].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="career">
+                            <div class="update-date">Sep 2024</div>
+                            <div class="update-content">
+                                <h3>Research Grant Awarded</h3>
+                                <p>Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="talks">
+                            <div class="update-date">Aug 2024</div>
+                            <div class="update-content">
+                                <h3>Workshop Organization</h3>
+                                <p>Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="papers">
+                            <div class="update-date">Jul 2024</div>
+                            <div class="update-content">
+                                <h3>Media Coverage</h3>
+                                <p>Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item" data-type="talks">
+                            <div class="update-date">Jun 2024</div>
+                            <div class="update-content">
+                                <h3>Keynote Speaker</h3>
+                                <p>Delivered a keynote presentation at [Conference] on "Future Directions in [Your Field]".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-link">
+                    <a href="news.html" class="btn btn-outline">View All News & Updates</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="data-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

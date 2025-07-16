@@ -1,0 +1,547 @@
+# Personal Portfolio Data
+personal:
+  name: "Your Name"
+  title: "Your Professional Title"
+  description: "Welcome to my portfolio! I'm a [your profession] passionate about [your field/interests]. Here you'll find my research, projects, and professional journey."
+  photo: "https://via.placeholder.com/300x300/4f46e5/ffffff?text=Your+Photo"
+
+social_links:
+  linkedin: ""
+  twitter: ""
+  google_scholar: ""
+  substack: ""
+  semantic_scholar: ""
+  youtube: ""
+  github: ""
+
+# Featured Publications (for homepage)
+featured_publications:
+  - title: "Title of Your Important Paper"
+    authors: "Your Name, Co-Author Name"
+    venue: "Journal/Conference Name, 2024"
+    description: "Brief description of your research and its significance. This should be a concise summary that highlights the key contributions and impact of your work."
+    links:
+      pdf: ""
+      doi: ""
+      code: ""
+      data: ""
+      slides: ""
+      video: ""
+      poster: ""
+
+  - title: "Another Significant Research Work"
+    authors: "Your Name, Collaborator A, Collaborator B"
+    venue: "Top Venue Conference, 2023"
+    description: "Another brief description highlighting the innovation and impact of this research. Focus on what makes this work unique and valuable to the field."
+    links:
+      pdf: ""
+      doi: ""
+      slides: ""
+
+  - title: "Innovative Method for [Your Field]"
+    authors: "Your Name, Research Team"
+    venue: "Leading Journal, 2023"
+    description: "Description of a breakthrough or novel approach you've developed. Emphasize the practical applications and theoretical contributions."
+    links:
+      pdf: ""
+      doi: ""
+      data: ""
+
+# All Publications (for publications page)
+publications:
+  2024:
+    - number: 25
+      title: "Advanced Methods in [Your Research Area]: A Comprehensive Study"
+      authors: "<strong>Your Name</strong>, Collaborator A., Collaborator B., & Senior Author C."
+      venue: "<strong>International Conference on Machine Learning (ICML)</strong>, 2024"
+      type: "conference"
+      abstract: "This paper presents novel computational methods for addressing fundamental challenges in [your field]. Our approach demonstrates significant improvements over existing state-of-the-art techniques, achieving 25% better performance on standard benchmarks."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        data: ""
+
+    - number: 24
+      title: "Scalable Framework for Large-Scale [Application Domain]"
+      authors: "<strong>Your Name</strong>, Research Partner D., & Team Lead E."
+      venue: "<strong>Proceedings of the International Conference on Machine Learning (ICML)</strong>, 2024"
+      type: "conference"
+      abstract: "We introduce a scalable framework that handles large-scale datasets efficiently. The framework incorporates novel optimization techniques and distributed computing principles to achieve unprecedented scalability in [specific application]."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        slides: ""
+        video: ""
+
+  2023:
+    - number: 23
+      title: "Deep Learning Approaches for [Specific Problem]: Theory and Applications"
+      authors: "Collaborator F., <strong>Your Name</strong>, & Supervisor G."
+      venue: "<strong>Conference on Neural Information Processing Systems (NeurIPS)</strong>, 2023"
+      type: "conference"
+      abstract: "This work establishes theoretical foundations for applying deep learning to [specific problem domain]. We provide both theoretical analysis and practical implementations, showing significant improvements in accuracy and computational efficiency."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        data: ""
+
+    - number: 22
+      title: "Novel Architecture for Real-Time [Application]"
+      authors: "<strong>Your Name</strong>, Student H., & Collaborator I."
+      venue: "<strong>Workshop on Emerging Technologies at ICML</strong>, 2023"
+      type: "workshop"
+      abstract: "We present a novel neural architecture designed for real-time applications. The architecture balances accuracy and computational efficiency, making it suitable for deployment in resource-constrained environments."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        poster: ""
+
+    - number: 21
+      title: "Comprehensive Survey of [Research Area]: Current State and Future Directions"
+      authors: "<strong>Your Name</strong> & Senior Researcher J."
+      venue: "<strong>International Conference on Computer Vision (ICCV)</strong>, 2023"
+      type: "conference"
+      abstract: "This comprehensive survey reviews the current state of [research area], analyzing over 200 recent publications. We identify key trends, challenges, and promising future research directions, providing a roadmap for the research community."
+      links:
+        pdf: ""
+        doi: ""
+
+  2022:
+    - number: 20
+      title: "Emerging Trends in [Field]: A Methodological Innovation"
+      authors: "<strong>Your Name</strong>, Postdoc K., & PI L."
+      venue: "<strong>arXiv preprint</strong> arXiv:2022.12345, 2022"
+      type: "preprint"
+      abstract: "This preprint introduces a methodological innovation that addresses current limitations in [field]. The proposed method shows promising results and is currently under review at a top-tier venue."
+      links:
+        pdf: ""
+        arxiv: ""
+        code: ""
+
+    - number: 19
+      title: "Lightweight Models for Edge Computing Applications"
+      authors: "Student M., <strong>Your Name</strong>, & Industry Partner N."
+      venue: "<strong>Workshop on Efficient Deep Learning at NeurIPS</strong>, 2022"
+      type: "workshop"
+      abstract: "We propose lightweight deep learning models specifically designed for edge computing scenarios. Our models achieve competitive performance while maintaining low computational overhead and memory footprint."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        slides: ""
+
+    - number: 18
+      title: "Scalable Training Methods for Large Neural Networks"
+      authors: "<strong>Your Name</strong>, Research Team O., & Lead Scientist P."
+      venue: "<strong>International Conference on Learning Representations (ICLR)</strong>, 2022"
+      type: "conference"
+      abstract: "This work addresses the challenges of training large neural networks efficiently. We introduce novel optimization techniques that reduce training time while maintaining model quality, enabling practical deployment of large-scale models."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        data: ""
+
+  2021:
+    - number: 17
+      title: "Robust Machine Learning Under Distribution Shift"
+      authors: "Collaborator Q., <strong>Your Name</strong>, & Senior Author R."
+      venue: "<strong>International Conference on Machine Learning (ICML)</strong>, 2021"
+      type: "conference"
+      abstract: "We investigate the robustness of machine learning models when deployed in environments different from their training distribution. Our proposed techniques improve model reliability and performance in real-world scenarios."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        slides: ""
+
+    - number: 16
+      title: "Privacy-Preserving Learning in Federated Settings"
+      authors: "<strong>Your Name</strong>, PhD Student S., & Advisor T."
+      venue: "<strong>Extended Abstract at Conference on Computer and Communications Security (CCS)</strong>, 2021"
+      type: "extended"
+      abstract: "We propose novel methods for maintaining privacy while enabling collaborative learning across multiple institutions. Our approach balances privacy guarantees with model performance, enabling secure knowledge sharing."
+      links:
+        pdf: ""
+        doi: ""
+        poster: ""
+
+    - number: 15
+      title: "Interpretable AI for Healthcare Applications"
+      authors: "Collaborator U., <strong>Your Name</strong>, & Medical Expert V."
+      venue: "<strong>Extended Abstract at International Conference on Medical Image Computing (MICCAI)</strong>, 2021"
+      type: "extended"
+      abstract: "This extended abstract presents our ongoing work on developing interpretable machine learning models for healthcare applications, focusing on providing clinicians with actionable insights while maintaining high diagnostic accuracy."
+      links:
+        pdf: ""
+        doi: ""
+        poster: ""
+
+  2020:
+    - number: 14
+      title: "Neural Architecture Search for Resource-Constrained Devices"
+      authors: "<strong>Your Name</strong>, Junior Researcher W., & Industry Partner X."
+      venue: "<strong>Extended Abstract at International Conference on Learning Representations (ICLR)</strong>, 2020"
+      type: "extended"
+      abstract: "We explore automated neural architecture search techniques specifically designed for resource-constrained edge devices. Our preliminary results show promising directions for efficient model design in mobile computing scenarios."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        poster: ""
+
+    - number: 13
+      title: "Multi-Modal Learning for Complex Scene Understanding"
+      authors: "Research Team Y., <strong>Your Name</strong>, & Principal Investigator Z."
+      venue: "<strong>European Conference on Computer Vision (ECCV)</strong>, 2020"
+      type: "conference"
+      abstract: "This work addresses the challenge of understanding complex scenes by leveraging multiple modalities including visual, textual, and audio information. Our unified framework demonstrates improved performance across various scene understanding tasks."
+      links:
+        pdf: ""
+        doi: ""
+        code: ""
+        data: ""
+
+# Recent Updates
+recent_updates:
+  - date: "Jan 2025"
+    type: "papers"
+    title: "New Paper Accepted"
+    description: "Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!"
+
+  - date: "Dec 2024"
+    type: "talks"
+    title: "Conference Presentation"
+    description: "Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!"
+
+  - date: "Nov 2024"
+    type: "career"
+    title: "Award Recognition"
+    description: "Honored to receive the [Award Name] for [achievement/contribution]."
+
+  - date: "Oct 2024"
+    type: "career"
+    title: "New Collaboration"
+    description: "Started an exciting collaboration with [Institution/Company] on [project topic]."
+
+  - date: "Sep 2024"
+    type: "career"
+    title: "Research Grant Awarded"
+    description: "Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years."
+
+  - date: "Aug 2024"
+    type: "talks"
+    title: "Workshop Organization"
+    description: "Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide."
+
+  - date: "Jul 2024"
+    type: "papers"
+    title: "Media Coverage"
+    description: "Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research."
+
+  - date: "Jun 2024"
+    type: "talks"
+    title: "Keynote Speaker"
+    description: "Delivered a keynote presentation at [Conference] on \"Future Directions in [Your Field]\"."
+
+# Education Timeline
+education:
+  - date: "2020 - 2024"
+    degree: "Ph.D. in [Your Field]"
+    institution: "University Name"
+    dissertation: "Title of Your Dissertation Research"
+    advisor: "Dr. Advisor Name"
+    description: "Focused on [research area] with emphasis on [specific topics]. Developed novel approaches for [your contribution]."
+    achievements:
+      - "Summa Cum Laude"
+      - "Research Fellowship"
+      - "Best Dissertation Award"
+
+  - date: "2018 - 2020"
+    degree: "M.S. in [Your Field]"
+    institution: "University Name"
+    thesis: "Title of Your Master's Thesis"
+    advisor: "Dr. Advisor Name"
+    description: "Specialized in [area of specialization]. Conducted research on [research topic] resulting in [outcome/impact]."
+    achievements:
+      - "Magna Cum Laude"
+      - "Teaching Assistant"
+
+  - date: "2014 - 2018"
+    degree: "B.S. in [Your Field]"
+    institution: "University Name"
+    major: "[Major] with minor in [Minor]"
+    description: "Graduated with honors. Completed senior capstone project on [project topic]. Active in [relevant activities/organizations]."
+    achievements:
+      - "Dean's List"
+      - "Honor Society"
+      - "Undergraduate Research"
+
+# Career Timeline
+career:
+  - date: "2024 - Present"
+    position: "Current Position Title"
+    institution: "Current Institution/Company"
+    description: "Leading research initiatives in [area]. Responsible for [key responsibilities]. Managing [team/projects/budget]."
+    responsibilities:
+      - "Key achievement or responsibility #1"
+      - "Key achievement or responsibility #2"
+      - "Key achievement or responsibility #3"
+      - "Key achievement or responsibility #4"
+
+  - date: "2022 - 2024"
+    position: "Previous Position Title"
+    institution: "Previous Institution/Company"
+    description: "Conducted research in [area]. Collaborated with [teams/departments]. Published [number] papers in top-tier venues."
+    responsibilities:
+      - "Developed [specific technology/method/approach]"
+      - "Led [project/initiative] resulting in [outcome]"
+      - "Mentored [number] graduate students"
+      - "Secured $[amount] in research funding"
+
+  - date: "2020 - 2022"
+    position: "Research Assistant / Intern"
+    institution: "Institution/Company Name"
+    description: "Early career experience in [field]. Gained expertise in [specific skills/technologies]. Contributed to [projects/publications]."
+    responsibilities:
+      - "Assisted in [specific research projects]"
+      - "Developed skills in [technologies/methods]"
+      - "Co-authored [number] publications"
+      - "Presented findings at [conferences/meetings]"
+
+# Skills
+skills:
+  technical:
+    - "Python"
+    - "R"
+    - "MATLAB"
+    - "TensorFlow"
+    - "PyTorch"
+    - "Git"
+    - "Docker"
+    - "AWS"
+
+  research_areas:
+    - "Machine Learning"
+    - "Data Science"
+    - "Statistical Analysis"
+    - "Computer Vision"
+    - "Natural Language Processing"
+    - "Deep Learning"
+
+  soft_skills:
+    - "Research Leadership"
+    - "Project Management"
+    - "Academic Writing"
+    - "Public Speaking"
+    - "Mentoring"
+    - "Grant Writing"
+
+# Awards
+awards:
+  - title: "Outstanding Research Award"
+    year: "2024"
+    description: "Recognized for groundbreaking research in [field] by [Organization/Institution]."
+
+  - title: "Best Paper Award"
+    year: "2023"
+    description: "Received best paper award at [Conference Name] for work on [research topic]."
+
+  - title: "Research Fellowship"
+    year: "2022-2024"
+    description: "Prestigious fellowship from [Organization] supporting doctoral research."
+
+  - title: "Excellence in Teaching"
+    year: "2022"
+    description: "Teaching excellence award for outstanding contribution to student learning."
+
+# Collaborators
+collaborators:
+  - name: "Dr. Collaborator A"
+    institution: "University Name"
+    publications: 8
+
+  - name: "Dr. Senior Author C"
+    institution: "Research Institute"
+    publications: 6
+
+  - name: "Dr. Supervisor G"
+    institution: "Tech Company"
+    publications: 5
+
+  - name: "Dr. Research Partner D"
+    institution: "International Lab"
+    publications: 4
+
+# Service & Volunteer Work
+service:
+  reviewing:
+    conferences:
+      - name: "International Conference on Machine Learning (ICML)"
+        reviews: 6
+        period: "2022 - Present"
+      - name: "Conference on Neural Information Processing Systems (NeurIPS)"
+        reviews: 8
+        period: "2021 - Present"
+      - name: "International Conference on Learning Representations (ICLR)"
+        reviews: 5
+        period: "2022 - Present"
+      - name: "AAAI Conference on Artificial Intelligence"
+        reviews: 4
+        period: "2021 - Present"
+      - name: "International Conference on Computer Vision (ICCV)"
+        reviews: 3
+        period: "2023 - Present"
+
+  committees:
+    - role: "Program Committee Member"
+      venue: "International Conference on Machine Learning (ICML)"
+      period: "2023 - Present"
+      description: "Participate in program committee meetings, review papers, and contribute to conference organization and policy decisions."
+    
+    - role: "Organizing Committee"
+      venue: "Workshop on Responsible AI"
+      period: "2024"
+      description: "Co-organized a workshop focusing on ethical AI development and deployment. Coordinated with speakers, managed logistics, and facilitated discussions."
+    
+    - role: "Advisory Board Member"
+      venue: "AI Research Initiative"
+      period: "2023 - Present"
+      description: "Provide strategic guidance for research direction and funding allocation for a multi-institutional AI research program."
+
+  events:
+    - title: "AI Research Symposium 2024"
+      role: "Conference Co-Chair"
+      attendees: "200+"
+      presentations: "50+"
+      partners: "15 Industry Partners"
+      description: "Led the organization of a major research symposium bringing together academic researchers and industry practitioners to discuss cutting-edge AI research."
+    
+    - title: "Graduate Student Research Workshop"
+      role: "Organizer"
+      attendees: "75+ Students"
+      presentations: "25+ Posters"
+      frequency: "Annual Event"
+      description: "Organized an annual workshop to showcase graduate student research and facilitate networking between students and faculty."
+
+# News & Updates (Extended)
+news_updates:
+  - date: "Jan 2025"
+    type: "papers"
+    category: "Papers & Publications"
+    title: "New Paper Accepted"
+    description: "Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!"
+    tags: ["Research", "Publication"]
+
+  - date: "Dec 2024"
+    type: "talks"
+    category: "Talks & Presentations"
+    title: "Conference Presentation"
+    description: "Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!"
+    tags: ["Conference", "Presentation"]
+
+  - date: "Nov 2024"
+    type: "awards"
+    category: "Awards & Recognition"
+    title: "Award Recognition"
+    description: "Honored to receive the [Award Name] for [achievement/contribution]."
+    tags: ["Award", "Recognition"]
+
+  - date: "Oct 2024"
+    type: "career"
+    category: "Career Updates"
+    title: "New Collaboration"
+    description: "Started an exciting collaboration with [Institution/Company] on [project topic]."
+    tags: ["Collaboration", "Partnership"]
+
+  - date: "Sep 2024"
+    type: "career"
+    category: "Career Updates"
+    title: "Research Grant Awarded"
+    description: "Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years."
+    tags: ["Grant", "Funding"]
+
+  - date: "Aug 2024"
+    type: "talks"
+    category: "Talks & Presentations"
+    title: "Workshop Organization"
+    description: "Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide."
+    tags: ["Workshop", "Organization"]
+
+  - date: "Jul 2024"
+    type: "media"
+    category: "Media Coverage"
+    title: "Media Coverage"
+    description: "Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research."
+    tags: ["Media", "Impact"]
+
+  - date: "Jun 2024"
+    type: "talks"
+    category: "Talks & Presentations"
+    title: "Keynote Speaker"
+    description: "Delivered a keynote presentation at [Conference] on \"Future Directions in [Your Field]\"."
+    tags: ["Keynote", "Speaking"]
+
+# Awards & Recognition (Extended)
+awards_extended:
+  research:
+    - year: "2024"
+      title: "Outstanding Research Award"
+      organization: "International AI Research Society"
+      description: "Recognized for groundbreaking research in [field] by [Organization/Institution]. This prestigious award is given annually to researchers who have made significant contributions to advancing the field of artificial intelligence."
+      value: "$10,000 Prize"
+      level: "International"
+    
+    - year: "2023"
+      title: "Best Paper Award"
+      organization: "International Conference on Machine Learning (ICML)"
+      description: "Received best paper award at ICML 2023 for work on [research topic]. Selected from over 3,000 submissions as the most impactful contribution to the conference."
+      level: "International Conference"
+      category: "Best Paper"
+    
+    - year: "2023"
+      title: "Young Researcher Award"
+      organization: "Association for Computing Machinery (ACM)"
+      description: "Honored as an outstanding young researcher for innovative contributions to machine learning and artificial intelligence research."
+      value: "$5,000 Prize"
+      level: "National"
+    
+    - year: "2022"
+      title: "Innovation Award"
+      organization: "Tech Innovation Foundation"
+      description: "Recognized for developing innovative AI technologies with significant real-world applications and potential for societal impact."
+      value: "$15,000 Prize"
+      level: "Industry"
+
+  academic:
+    - year: "2024"
+      title: "Summa Cum Laude"
+      organization: "Ph.D. Graduation Honors"
+      description: "Graduated with highest honors from Ph.D. program, recognizing exceptional academic performance and research excellence."
+      level: "University"
+      category: "Academic Excellence"
+    
+    - year: "2024"
+      title: "Best Dissertation Award"
+      organization: "Department of Computer Science"
+      description: "Awarded for the most outstanding doctoral dissertation in the department, recognizing significant contributions to the field."
+      value: "$2,000 Prize"
+      level: "Departmental"
+    
+    - year: "2020"
+      title: "Magna Cum Laude"
+      organization: "Master's Degree Honors"
+      description: "Graduated with high honors from Master's program, maintaining exceptional academic performance throughout the program."
+      level: "University"
+      category: "Academic Excellence"
+    
+    - year: "2018"
+      title: "Dean's List"
+      organization: "College of Engineering"
+      description: "Consistently named to Dean's List throughout undergraduate studies for maintaining high GPA and academic excellence."
+      level: "College"
+      category: "Academic Achievement"
