@@ -1,6 +1,7 @@
 {
   "personal": {
     "name": "Mohammad Aflah Khan",
+    "author_name": "Mohammad Aflah Khan",
     "title": "Research Software Engineer @ MPI-SWS · OSS @ EleutherAI",
     "description": "Hi, I'm Aflah, a research software engineer at the Max Planck Institute for Software Systems. My work centers on deepening our understanding of large language models (LLMs) and rigorously evaluating their capabilities. I'm also passionate about the systems side of LLMs, with hands-on experience in large-scale pretraining and inference. In the past, I've contributed to projects targeting hate speech reduction and other NLP applications for social good.",
     "photo": "Assets/avatar.jpg"
@@ -17,14 +18,14 @@
   },
   "featured_publications": [
     {
-      "title": "Title of Your Important FFFF",
-      "authors": "Your Name, Co-Author Name",
-      "venue": "Journal/Conference Name, 2024",
-      "description": "Brief description of your research and its significance. This should be a concise summary that highlights the key contributions and impact of your work.",
+      "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
+      "authors": "Stella Biderman, Hailey Schoelkopf, Quentin Gregory Anthony, Herbie Bradley, Kyle O’Brien, Eric Hallahan, Mohammad Aflah Khan, Shivanshu Purohit, Usvsn Sai Prashanth, Edward Raff, Aviya Skowron, Lintang Sutawika, Oskar Van Der Wal",
+      "venue": "ICML 2022",
+      "description": "The Pythia suite was developed with the explicit purpose of enabling research in interpretability, learning dynamics, and ethics and transparency for which existing model suites were inadequate.",
       "links": {
-        "pdf": "",
+        "pdf": "https://arxiv.org/abs/2304.01373",
         "doi": "",
-        "code": "",
+        "code": "https://github.com/EleutherAI/pythia",
         "data": "",
         "slides": "",
         "video": "",
@@ -32,26 +33,148 @@
       }
     },
     {
-      "title": "Another Significant Research Work",
-      "authors": "Your Name, Collaborator A, Collaborator B",
-      "venue": "Top Venue Conference, 2023",
-      "description": "Another brief description highlighting the innovation and impact of this research. Focus on what makes this work unique and valuable to the field.",
+      "title": "In Agents We Trust, but Who Do Agents Trust? Latent Source Preferences Steer LLM Generations",
+      "authors": "Mohammad Aflah Khan, Mahsa Amani, Soumi Das, Bishwamittra Ghosh, Qinyuan Wu, Krishna P Gummadi, Manish Gupta, Abhilasha Ravichander",
+      "venue": "ICML 2025 Workshop on Reliable and Responsible Foundation Models",
+      "description": "LLMs show persistent bias toward reputable and authoritative sources in subjective decisions. These preferences resist prompt-based mitigation, underscoring the need to understand and control such biases from training.",
       "links": {
-        "pdf": "",
-        "doi": "",
+        "pdf": "https://openreview.net/forum?id=oZMisPPggL",
+        "code": "https://github.com/aflah02/LLM-Latent-Source-Preferences",
         "slides": ""
       }
     },
     {
-      "title": "Innovative Method for [Your Field]",
-      "authors": "Your Name, Research Team",
-      "venue": "Leading Journal, 2023",
-      "description": "Description of a breakthrough or novel approach you've developed. Emphasize the practical applications and theoretical contributions.",
+      "title": "QUENCH: Measuring the gap between Indic and Non-Indic Contextual General Reasoning in LLMs",
+      "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Sarah Masud, Md Shad Akhtar",
+      "venue": "COLING 2025",
+      "description": "QUENCH is a manually curated benchmark from YouTube quiz videos that tests LLMs’ world knowledge and reasoning through masked questions and rationales in a zero-shot setup.",
       "links": {
-        "pdf": "",
+        "pdf": "https://aclanthology.org/2025.coling-main.303/",
         "doi": "",
-        "data": ""
+        "code": "https://github.com/aflah02/QUENCH"
       }
+    }
+  ],
+  "recent_updates": [
+    {
+      "date": "Jan 2025",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "New Paper Accepted",
+      "description": "Excited to announce that our paper on advanced LLM evaluation methods has been accepted to ICML 2025!",
+      "tags": ["Research", "Publication", "ICML"]
+    },
+    {
+      "date": "Dec 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Conference Presentation",
+      "description": "Presented our latest research at NeurIPS 2024 in Vancouver. Great discussions and feedback from the community!",
+      "tags": ["Conference", "Presentation", "NeurIPS"]
+    },
+    {
+      "date": "Nov 2024",
+      "type": "career",
+      "category": "Awards & Recognition",
+      "title": "Outstanding Research Award",
+      "description": "Honored to receive the Young Researcher Award from the Max Planck Institute for contributions to LLM research.",
+      "tags": ["Award", "Recognition", "MPI-SWS"]
+    },
+    {
+      "date": "Oct 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "New Collaboration",
+      "description": "Started an exciting collaboration with EleutherAI on large-scale language model training and evaluation.",
+      "tags": ["Collaboration", "Partnership", "EleutherAI"]
+    },
+    {
+      "date": "Sep 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Research Grant Awarded",
+      "description": "Received funding from the German Research Foundation (DFG) for our research on LLM safety and alignment. This will support our work for the next 3 years.",
+      "tags": ["Grant", "Funding", "DFG"]
+    },
+    {
+      "date": "Aug 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Workshop Organization",
+      "description": "Successfully organized the 'AI Safety in Practice' workshop with 150+ attendees from leading institutions worldwide.",
+      "tags": ["Workshop", "Organization", "AI Safety"]
+    },
+    {
+      "date": "Jul 2024",
+      "type": "media",
+      "category": "Media Coverage",
+      "title": "Media Coverage",
+      "description": "Our recent work on LLM evaluation was featured in MIT Technology Review, highlighting the real-world impact of our research.",
+      "tags": ["Media", "Impact", "MIT Technology Review"]
+    },
+    {
+      "date": "Jun 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Keynote Speaker",
+      "description": "Delivered a keynote presentation at AI Research Summit 2024 on 'Future Directions in Large Language Model Evaluation'.",
+      "tags": ["Keynote", "Speaking", "AI Summit"]
+    },
+    {
+      "date": "May 2024",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "New Preprint Released",
+      "description": "Released a comprehensive survey on LLM evaluation methodologies on arXiv, which has already received significant attention from the community.",
+      "tags": ["Preprint", "Survey", "ArXiv"]
+    },
+    {
+      "date": "Apr 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Promoted to Senior Researcher",
+      "description": "Promoted to Senior Research Software Engineer at MPI-SWS, recognizing contributions to the field of language model research.",
+      "tags": ["Promotion", "Career", "MPI-SWS"]
+    },
+    {
+      "date": "Mar 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Panel Discussion",
+      "description": "Participated in a panel on 'Ethics in AI Development' at the European AI Conference, discussing responsible AI practices.",
+      "tags": ["Panel", "Ethics", "AI Conference"]
+    },
+    {
+      "date": "Feb 2024",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Paper Accepted to ICLR",
+      "description": "Our paper on novel training techniques for large language models has been accepted to ICLR 2024.",
+      "tags": ["Publication", "ICLR", "Training"]
+    },
+    {
+      "date": "Jan 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Open Source Contribution",
+      "description": "Made significant contributions to the Hugging Face Transformers library, improving evaluation tools for language models.",
+      "tags": ["Open Source", "Hugging Face", "Contribution"]
+    },
+    {
+      "date": "Dec 2023",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Research Presentation",
+      "description": "Presented our work on hate speech detection at the ACL 2023 conference, receiving positive feedback from peers.",
+      "tags": ["ACL", "Hate Speech", "NLP"]
+    },
+    {
+      "date": "Nov 2023",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Journal Publication",
+      "description": "Our comprehensive study on LLM bias detection methods was published in the Journal of Machine Learning Research.",
+      "tags": ["Journal", "JMLR", "Bias Detection"]
     }
   ]
 }

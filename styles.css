@@ -370,6 +370,14 @@ body {
     font-weight: 500;
 }
 
+.publication-authors strong {
+    color: #1e293b;
+    font-weight: 600;
+    background-color: #f1f5f9;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
 .publication-venue {
     color: #4f46e5;
     margin-bottom: 15px;
@@ -948,6 +956,10 @@ body {
 
 .publication-authors strong {
     color: #1e293b;
+    font-weight: 600;
+    background-color: #f1f5f9;
+    padding: 1px 3px;
+    border-radius: 3px;
 }
 
 .publication-venue {

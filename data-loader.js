@@ -3,14 +3,17 @@
 class PortfolioData {
     constructor() {
         this.data = null;
+        this.authorName = null;
     }
 
-    // Load data (JSON for now, can be switched back to YAML later)
+    // Load data from JSON file
     async loadData() {
         try {
             const response = await fetch('data.json');
             const data = await response.json();
             this.data = data;
+            // Store author name for highlighting
+            this.authorName = data.personal?.author_name || data.personal?.name;
             return this.data;
         } catch (error) {
             console.error('Error loading data:', error);
@@ -18,138 +21,35 @@ class PortfolioData {
         }
     }
 
-    // Simple YAML parser for the portfolio data structure
-    parseYAML(yamlText) {
-        const lines = yamlText.split('\n');
-        const result = {};
-        let currentSection = null;
-        let currentSubsection = null;
-        let currentItem = null;
-        let indentLevel = 0;
-
-        for (let line of lines) {
-            // Skip empty lines and comments
-            if (line.trim() === '' || line.trim().startsWith('#')) continue;
-
-            const trimmedLine = line.trim();
-            const currentIndent = line.length - line.trimStart().length;
-
-            // Main sections (no indent)
-            if (currentIndent === 0 && trimmedLine.includes(':')) {
-                const [key, value] = trimmedLine.split(':');
-                currentSection = key.trim();
-                if (value && value.trim()) {
-                    result[currentSection] = value.trim().replace(/"/g, '');
-                } else {
-                    result[currentSection] = {};
-                }
-                currentSubsection = null;
-                currentItem = null;
-            }
-            // Subsections (2 spaces)
-            else if (currentIndent === 2 && trimmedLine.includes(':')) {
-                const [key, value] = trimmedLine.split(':');
-                currentSubsection = key.trim();
-                if (value && value.trim()) {
-                    result[currentSection][currentSubsection] = value.trim().replace(/"/g, '');
-                } else {
-                    result[currentSection][currentSubsection] = Array.isArray(result[currentSection]) ? 
-                        result[currentSection] : (result[currentSection][currentSubsection] || {});
-                }
-                currentItem = null;
-            }
-            // Array items (4 spaces, starts with -)
-            else if (currentIndent === 4 && trimmedLine.startsWith('- ')) {
-                if (!Array.isArray(result[currentSection])) {
-                    if (currentSubsection) {
-                        if (!Array.isArray(result[currentSection][currentSubsection])) {
-                            result[currentSection][currentSubsection] = [];
-                        }
-                    } else {
-                        result[currentSection] = [];
-                    }
-                }
-
-                const itemText = trimmedLine.substring(2);
-                if (itemText.includes(':')) {
-                    const [key, value] = itemText.split(':');
-                    currentItem = { [key.trim()]: value.trim().replace(/"/g, '') };
-                    if (currentSubsection) {
-                        result[currentSection][currentSubsection].push(currentItem);
-                    } else {
-                        result[currentSection].push(currentItem);
-                    }
-                } else {
-                    if (currentSubsection) {
-                        result[currentSection][currentSubsection].push(itemText.replace(/"/g, ''));
-                    } else {
-                        result[currentSection].push(itemText.replace(/"/g, ''));
-                    }
-                }
-            }
-            // Properties of items (6+ spaces)
-            else if (currentIndent >= 6 && trimmedLine.includes(':')) {
-                const [key, value] = trimmedLine.split(':');
-                const keyName = key.trim();
-                const keyValue = value.trim().replace(/"/g, '');
-
-                if (currentItem) {
-                    if (currentIndent === 6) {
-                        currentItem[keyName] = keyValue;
-                    } else if (currentIndent === 8) {
-                        // Handle nested objects like links
-                        if (!currentItem[Object.keys(currentItem)[Object.keys(currentItem).length - 1]] || 
-                            typeof currentItem[Object.keys(currentItem)[Object.keys(currentItem).length - 1]] === 'string') {
-                            const lastKey = Object.keys(currentItem).find(k => k !== keyName) || keyName;
-                            if (keyName !== lastKey) {
-                                currentItem[lastKey] = {};
-                            }
-                        }
-                        const parentKey = this.findParentKey(currentItem, currentIndent);
-                        if (parentKey && typeof currentItem[parentKey] === 'object') {
-                            currentItem[parentKey][keyName] = keyValue;
-                        } else {
-                            currentItem[keyName] = keyValue;
-                        }
-                    }
-                }
-            }
-            // Array items within nested structures
-            else if (currentIndent >= 6 && trimmedLine.startsWith('- ')) {
-                const itemText = trimmedLine.substring(2).replace(/"/g, '');
-                const parentKey = this.findParentKey(currentItem, currentIndent);
-                if (parentKey) {
-                    if (!Array.isArray(currentItem[parentKey])) {
-                        currentItem[parentKey] = [];
-                    }
-                    currentItem[parentKey].push(itemText);
-                }
-            }
-        }
-
-        // Post-process the data to handle special cases
-        this.postProcessData(result);
-        return result;
-    }
-
-    findParentKey(item, indentLevel) {
-        const keys = Object.keys(item);
-        return keys[keys.length - 1];
-    }
-
-    postProcessData(data) {
-        // Convert publications object to proper structure
-        if (data.publications) {
-            const years = Object.keys(data.publications);
-            const processedPublications = {};
-            
-            years.forEach(year => {
-                if (Array.isArray(data.publications[year])) {
-                    processedPublications[year] = data.publications[year];
-                }
-            });
-            data.publications = processedPublications;
-        }
+    // Utility function to highlight author name in author lists
+    highlightAuthorName(authorString) {
+        if (!this.authorName || !authorString) return authorString;
+        
+        // Create variations of the author name to match different formats
+        const fullName = this.authorName;
+        const nameParts = fullName.split(' ');
+        const firstName = nameParts[0];
+        const lastName = nameParts[nameParts.length - 1];
+        
+        // Different name format variations to look for
+        const nameVariations = [
+            fullName, // "Mohammad Aflah Khan"
+            `${firstName} ${lastName}`, // "Mohammad Khan" (if middle name is omitted)
+            `${lastName}, ${firstName}`, // "Khan, Mohammad" (lastname, firstname format)
+            fullName.replace(/\s+/g, '\\s+'), // Allow flexible spacing
+        ];
+        
+        let highlightedString = authorString;
+        
+        // Apply highlighting for each variation
+        nameVariations.forEach(variation => {
+            // Escape special regex characters and create word boundary regex
+            const escapedVariation = variation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`\\b${escapedVariation}\\b`, 'gi');
+            highlightedString = highlightedString.replace(regex, '<strong>$&</strong>');
+        });
+        
+        return highlightedString;
     }
 
     // Utility function to render publication links
@@ -178,7 +78,7 @@ class PortfolioData {
             <article class="publication-card">
                 <div class="publication-content">
                     <h3 class="publication-title">${pub.title}</h3>
-                    <p class="publication-authors">${pub.authors}</p>
+                    <p class="publication-authors">${this.highlightAuthorName(pub.authors)}</p>
                     <p class="publication-venue">${pub.venue}</p>
                     <p class="publication-description">${pub.description}</p>
                     ${this.renderPublicationLinks(pub.links)}
@@ -202,7 +102,7 @@ class PortfolioData {
                     <div class="publication-number">${pub.number || ''}</div>
                     <div class="publication-details">
                         <h3 class="publication-title">${pub.title}</h3>
-                        <p class="publication-authors">${pub.authors}</p>
+                        <p class="publication-authors">${this.highlightAuthorName(pub.authors)}</p>
                         <p class="publication-venue">${pub.venue}</p>
                         <p class="publication-abstract">${pub.abstract || ''}</p>
                         ${this.renderPublicationLinks(pub.links)}

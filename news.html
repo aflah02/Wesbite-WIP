@@ -51,7 +51,6 @@
                     <button class="filter-btn" data-filter="talks">Talks & Presentations</button>
                     <button class="filter-btn" data-filter="career">Career Updates</button>
                     <button class="filter-btn" data-filter="media">Media Coverage</button>
-                    <button class="filter-btn" data-filter="awards">Awards & Recognition</button>
                 </div>
                 
                 <div class="search-box">
@@ -206,6 +205,49 @@
     </footer>
 
     <script src="data-loader.js"></script>
+    <script>
+        // Initialize and load data for news page
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('Loading news data...');
+            
+            try {
+                const portfolioData = new PortfolioData();
+                const data = await portfolioData.loadData();
+                
+                console.log('Data loaded:', data);
+                
+                if (data) {
+                    // Update title and footer with personal info
+                    if (data.personal) {
+                        document.title = `News & Updates - ${data.personal.name}`;
+                        const footerText = document.querySelector('.footer p');
+                        if (footerText) {
+                            footerText.innerHTML = `&copy; 2025 ${data.personal.name}. All rights reserved.`;
+                        }
+                    }
+                    
+                    // Update news items with all recent updates
+                    if (data.recent_updates) {
+                        console.log('Updating news items...');
+                        const newsContainer = document.querySelector('.news-container');
+                        if (newsContainer) {
+                            const newsHTML = portfolioData.renderNewsItems(data.recent_updates);
+                            if (newsHTML) {
+                                newsContainer.innerHTML = newsHTML;
+                                console.log('Updated news items');
+                            }
+                        }
+                    }
+                    
+                    console.log('News page population complete!');
+                } else {
+                    console.error('No data loaded for news page');
+                }
+            } catch (error) {
+                console.error('Error loading news data:', error);
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

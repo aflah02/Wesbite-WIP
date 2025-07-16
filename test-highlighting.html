@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Highlighting Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-case { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .publication-authors strong {
+            color: #1e293b;
+            font-weight: 600;
+            background-color: #f1f5f9;
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Author Name Highlighting Test</h1>
+    
+    <div class="test-case">
+        <h3>Test Case 1: First Author</h3>
+        <p class="publication-authors" id="test1">Mohammad Aflah Khan, Collaborator A., Collaborator B.</p>
+    </div>
+    
+    <div class="test-case">
+        <h3>Test Case 2: Middle Author</h3>
+        <p class="publication-authors" id="test2">Collaborator A., Mohammad Aflah Khan, Collaborator B.</p>
+    </div>
+    
+    <div class="test-case">
+        <h3>Test Case 3: Last Author</h3>
+        <p class="publication-authors" id="test3">Collaborator A., Collaborator B., Mohammad Aflah Khan</p>
+    </div>
+    
+    <div class="test-case">
+        <h3>Test Case 4: With Asterisk</h3>
+        <p class="publication-authors" id="test4">Mohammad Aflah Khan*, Neemesh Yadav*, Sarah Masud</p>
+    </div>
+
+    <script src="data-loader.js"></script>
+    <script>
+        // Test the highlighting functionality
+        async function testHighlighting() {
+            const portfolioData = new PortfolioData();
+            await portfolioData.loadData();
+            
+            const testCases = [
+                'Mohammad Aflah Khan, Collaborator A., Collaborator B.',
+                'Collaborator A., Mohammad Aflah Khan, Collaborator B.',
+                'Collaborator A., Collaborator B., Mohammad Aflah Khan',
+                'Mohammad Aflah Khan*, Neemesh Yadav*, Sarah Masud'
+            ];
+            
+            testCases.forEach((testCase, index) => {
+                const element = document.getElementById(`test${index + 1}`);
+                const highlighted = portfolioData.highlightAuthorName(testCase);
+                element.innerHTML = highlighted;
+                console.log(`Test ${index + 1}:`, highlighted);
+            });
+        }
+        
+        testHighlighting();
+    </script>
+</body>
+</html>

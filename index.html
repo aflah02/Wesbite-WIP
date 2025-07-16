@@ -301,6 +301,33 @@
                         }
                     }
                     
+                    // Update featured publications
+                    if (data.featured_publications) {
+                        console.log('Updating featured publications...');
+                        const publicationsGrid = document.querySelector('.publications-grid');
+                        if (publicationsGrid) {
+                            const publicationsHTML = portfolioData.renderFeaturedPublications(data.featured_publications);
+                            if (publicationsHTML) {
+                                publicationsGrid.innerHTML = publicationsHTML;
+                                console.log('Updated featured publications');
+                            }
+                        }
+                    }
+                    
+                    // Update recent updates (first 10 only)
+                    if (data.recent_updates) {
+                        console.log('Updating recent updates...');
+                        const updatesTimeline = document.querySelector('.updates-timeline');
+                        if (updatesTimeline) {
+                            const recentUpdates = data.recent_updates.slice(0, 10); // Only first 10
+                            const updatesHTML = portfolioData.renderRecentUpdates(recentUpdates);
+                            if (updatesHTML) {
+                                updatesTimeline.innerHTML = updatesHTML;
+                                console.log('Updated recent updates');
+                            }
+                        }
+                    }
+                    
                     console.log('Data population complete!');
                 } else {
                     console.error('No data loaded');
