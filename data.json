@@ -177,6 +177,14 @@
       "tags": ["Career", "MPI-SWS", "Research"]
     },
     {
+      "date": "May 2023",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Organizing HASOC 2023",
+      "description": "I will be co-organizing the HASOC Subtrack at FIRE 2023: Identification of Tokens Contributing to Explicit Hate in English by Span Detection.",
+      "tags": ["ICLR", "Workshop", "Social Good"]
+    },
+    {
       "date": "Aug 2023",
       "type": "career",
       "category": "Career Updates",
@@ -246,6 +254,14 @@
       "category": "Career Updates",
       "title": "Google Summer of Code @ TensorFlow",
       "description": "I am one of the two people selected to work on the KerasNLP project as part of Google Summer of Code 2022.",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
+    },
+    {
+      "date": "June 2021",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Undergraduate Student Researcher @ LCS2",
+      "description": "I’ll be joining the Laboratory for Computational Social Systems (LCS2) as an Undergraduate Student Researcher, working under the guidance of Dr. Md. Shad Akhtar and Dr. Tanmoy Chakraborty.",
       "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
     }
   ],
