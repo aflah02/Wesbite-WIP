@@ -45,17 +45,12 @@
         <!-- News Filters -->
         <section class="publication-filters">
             <div class="container">
-                <div class="filter-buttons">
+                <div class="news-filter-buttons">
                     <button class="filter-btn active" data-filter="all">All Updates</button>
                     <button class="filter-btn" data-filter="papers">Papers & Publications</button>
                     <button class="filter-btn" data-filter="talks">Talks & Presentations</button>
                     <button class="filter-btn" data-filter="career">Career Updates</button>
                     <button class="filter-btn" data-filter="media">Media Coverage</button>
-                </div>
-                
-                <div class="search-box">
-                    <input type="text" id="newsSearchInput" placeholder="Search news and updates...">
-                    <i class="fas fa-search"></i>
                 </div>
             </div>
         </section>
@@ -235,6 +230,11 @@
                             if (newsHTML) {
                                 newsContainer.innerHTML = newsHTML;
                                 console.log('Updated news items');
+                                
+                                // Initialize news filters after data is loaded
+                                setTimeout(() => {
+                                    initializeNewsFilters();
+                                }, 200);
                             }
                         }
                     }
@@ -247,6 +247,61 @@
                 console.error('Error loading news data:', error);
             }
         });
+        
+        // Function to initialize news page filters after data is loaded
+        function initializeNewsFilters() {
+            console.log('Initializing news filters...');
+            
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsItems = document.querySelectorAll('.news-item');
+            
+            console.log('Found filter buttons:', filterButtons.length);
+            console.log('Found news items:', newsItems.length);
+            
+            // Initialize filter buttons
+            if (filterButtons.length > 0 && newsItems.length > 0) {
+                filterButtons.forEach(button => {
+                    // Remove any existing event listeners
+                    const newButton = button.cloneNode(true);
+                    button.parentNode.replaceChild(newButton, button);
+                });
+                
+                // Re-select after cloning
+                const freshFilterButtons = document.querySelectorAll('.filter-btn');
+                freshFilterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        console.log('News filter button clicked:', this.getAttribute('data-filter'));
+                        
+                        // Remove active class from all buttons
+                        freshFilterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filterType = this.getAttribute('data-filter');
+                        
+                        // Filter news items with animation
+                        newsItems.forEach(item => {
+                            const itemType = item.getAttribute('data-type');
+                            console.log('News item:', itemType, 'Filter:', filterType);
+                            
+                            if (filterType === 'all' || itemType === filterType) {
+                                item.style.display = 'flex';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'translateY(0)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'translateY(-10px)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+                console.log('News filters initialized successfully');
+            }
+        }
     </script>
     <script src="script.js"></script>
 </body>

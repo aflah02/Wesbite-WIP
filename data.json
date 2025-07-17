@@ -57,124 +57,67 @@
   ],
   "recent_updates": [
     {
-      "date": "Blarf 2025",
-      "type": "zibbles",
-      "category": "Whimsical Nonsense",
-      "title": "Flibber Jab Accepted",
-      "description": "Thrilled to announce that our groundbreaking research on quantum potato algorithms has been accepted to the Conference of Imaginary Sciences!",
-      "tags": ["Nonsense", "Potato", "Quantum"]
+      "date": "Jan 2025",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "New Paper Accepted",
+      "description": "Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!"
     },
     {
-      "date": "Gloob 2024",
-      "type": "blabber",
-      "category": "Gibberish Presentations",
-      "title": "Wonky Conference Thing",
-      "description": "Presented our revolutionary findings on invisible cheese theory at the International Symposium of Made-Up Stuff in Atlantis!",
-      "tags": ["Cheese", "Invisible", "Atlantis"]
+      "date": "Dec 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Conference Presentation",
+      "description": "Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!"
     },
     {
-      "date": "Zimzam 2024",
-      "type": "flooble",
-      "category": "Random Recognition",
-      "title": "Spectacular Gibberish Award",
-      "description": "Honored to receive the Golden Banana Award from the Institute of Complete Randomness for contributions to nonsensical research.",
-      "tags": ["Banana", "Random", "Nonsense"]
+      "date": "Nov 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Award Recognition",
+      "description": "Honored to receive the [Award Name] for [achievement/contribution]."
     },
     {
-      "date": "Plibber 2024",
-      "type": "wibble",
-      "category": "Silly Updates",
-      "title": "New Partnership with Unicorns",
-      "description": "Started an exciting collaboration with the Ministry of Unicorn Affairs on developing rainbow-powered computational systems.",
-      "tags": ["Unicorns", "Rainbow", "Magic"]
+      "date": "Oct 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "New Collaboration",
+      "description": "Started an exciting collaboration with [Institution/Company] on [project topic]."
     },
     {
-      "date": "Flumpf 2024",
-      "type": "blorb",
-      "category": "Fake Updates",
-      "title": "Imaginary Grant Awarded",
-      "description": "Received funding from the Department of Fictional Finance for our research on time-traveling rubber ducks. This will support our work for the next 42 years.",
-      "tags": ["Duck", "Time Travel", "Rubber"]
+      "date": "Sep 2024",
+      "type": "career",
+      "category": "Career Updates", 
+      "title": "Research Grant Awarded",
+      "description": "Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years."
     },
     {
-      "date": "Quibble 2024",
-      "type": "splibber",
-      "category": "Nonsense Presentations",
-      "title": "Workshop on Silly Things",
-      "description": "Successfully organized the 'Dancing Robots and Flying Pizzas' workshop with 999+ attendees from parallel dimensions.",
-      "tags": ["Dancing", "Robots", "Pizza"]
+      "date": "Aug 2024",
+      "type": "media",
+      "category": "Media Coverage",
+      "title": "Research Featured in Tech News",
+      "description": "Our breakthrough research was highlighted in [Tech Publication], showcasing its potential impact on the field."
     },
     {
-      "date": "Bloopity 2024",
-      "type": "whiffle",
-      "category": "Media Gibberish",
-      "title": "Featured in Fantasy Magazine",
-      "description": "Our revolutionary work on singing mushrooms was featured in the Journal of Impossible Things, highlighting the whimsical impact of our research.",
-      "tags": ["Mushrooms", "Singing", "Impossible"]
+      "date": "Jul 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Workshop Organization",
+      "description": "Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide."
     },
     {
-      "date": "Zoogleberry 2024",
-      "type": "flibber",
-      "category": "Random Presentations",
-      "title": "Keynote at Imaginary Summit",
-      "description": "Delivered a keynote presentation at the Fantasy Research Summit 2024 on 'Future Directions in Backwards Time Travel and Chocolate Teleportation'.",
-      "tags": ["Chocolate", "Teleportation", "Fantasy"]
+      "date": "Jun 2024",
+      "type": "media",
+      "category": "Media Coverage",
+      "title": "Media Coverage",
+      "description": "Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research."
     },
     {
-      "date": "Wibbleton 2024",
-      "type": "blaffle",
-      "category": "Silly Publications",
-      "title": "New Nonsense Paper Released",
-      "description": "Released a comprehensive study on the mating habits of digital butterflies on FakeArXiv, which has confused the entire scientific community.",
-      "tags": ["Butterflies", "Digital", "Confusion"]
-    },
-    {
-      "date": "Floogleheim 2024",
-      "type": "zipple",
-      "category": "Career Gibberish",
-      "title": "Promoted to Chief Nonsense Officer",
-      "description": "Promoted to Chief Nonsense Officer at the Institute of Random Things, recognizing contributions to the field of organized chaos.",
-      "tags": ["Chaos", "Chief", "Random"]
-    },
-    {
-      "date": "Blarpington 2024",
-      "type": "waffles",
-      "category": "Random Presentations",
-      "title": "Panel on Invisible Elephants",
-      "description": "Participated in a panel on 'Ethics in Invisible Elephant Training' at the Conference of Ridiculous Ideas, discussing responsible nonsense practices.",
-      "tags": ["Elephants", "Invisible", "Ethics"]
-    },
-    {
-      "date": "Gribbleflax 2024",
-      "type": "zoomies",
-      "category": "Silly Publications",
-      "title": "Paper Accepted to NONSENSE",
-      "description": "Our paper on novel techniques for teaching penguins to code has been accepted to the International Conference on Complete Rubbish 2024.",
-      "tags": ["Penguins", "Coding", "Rubbish"]
-    },
-    {
-      "date": "Flibbernaught 2024",
-      "type": "bingle",
-      "category": "Career Gibberish",
-      "title": "Open Source Contribution to Nothing",
-      "description": "Made significant contributions to the EmptySpace library, improving tools for doing absolutely nothing with maximum efficiency.",
-      "tags": ["Nothing", "Empty", "Efficiency"]
-    },
-    {
-      "date": "Quiddlebump 2023",
-      "type": "wobble",
-      "category": "Random Presentations",
-      "title": "Research Presentation on Jello",
-      "description": "Presented our work on the psychological effects of rainbow jello on interdimensional beings at the Conference of Weird Science.",
-      "tags": ["Jello", "Rainbow", "Interdimensional"]
-    },
-    {
-      "date": "Zibbletonk 2023",
-      "type": "flurfle",
-      "category": "Silly Publications",
-      "title": "Journal of Complete Nonsense",
-      "description": "Our comprehensive study on the migration patterns of flying staplers was published in the Journal of Things That Don't Exist.",
-      "tags": ["Staplers", "Flying", "Migration"]
+      "date": "May 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Keynote Speaker",
+      "description": "Delivered a keynote presentation at [Conference] on \"Future Directions in [Your Field]\"."
     }
   ]
 }

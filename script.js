@@ -151,40 +151,7 @@ function reinitializeEventListeners() {
     }
 
     // Reinitialize update filtering
-    const updateFilterButtons = document.querySelectorAll('.update-filter-btn');
-    const updateItems = document.querySelectorAll('.update-item');
-    
-    if (updateFilterButtons.length > 0) {
-        updateFilterButtons.forEach(button => {
-            button.replaceWith(button.cloneNode(true));
-        });
-        
-        const newUpdateFilterButtons = document.querySelectorAll('.update-filter-btn');
-        newUpdateFilterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                newUpdateFilterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                
-                const filterType = this.getAttribute('data-filter');
-                
-                updateItems.forEach(item => {
-                    item.style.opacity = '';
-                    item.style.transform = '';
-                    item.style.transition = '';
-                    
-                    if (filterType === 'all' || item.getAttribute('data-type') === filterType) {
-                        item.style.display = 'grid';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    }
+    initializeUpdateFilters();
 
     // Reinitialize publication and social links
     const pubLinks = document.querySelectorAll('.pub-link');
@@ -806,87 +773,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-// Enhanced scroll animations for new pages
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Only add animation class if element doesn't already have it
-                if (!entry.target.classList.contains('fade-in')) {
-                    entry.target.classList.add('fade-in');
-                }
-                // Ensure element is visible
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+// Initialize update filters function
+function initializeUpdateFilters() {
+    const updateFilterButtons = document.querySelectorAll('.update-filter-btn');
+    const updateItems = document.querySelectorAll('.update-item');
+    
+    if (updateFilterButtons.length > 0 && updateItems.length > 0) {
+        // Remove existing event listeners by cloning nodes
+        updateFilterButtons.forEach(button => {
+            button.replaceWith(button.cloneNode(true));
         });
-    }, observerOptions);
-
-    // Observe elements for animation on new pages
-    const newPageElements = document.querySelectorAll('.news-item, .award-item, .review-item, .editorial-item, .committee-item, .event-item, .outreach-item, .mentoring-category');
-    newPageElements.forEach(el => {
-        // Ensure elements are visible by default
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-        observer.observe(el);
-    });
-});
-
-// Statistics animation for awards and service pages
-document.addEventListener('DOMContentLoaded', function() {
-    const animateNumbers = (element, target, duration = 2000) => {
-        const start = 0;
-        const increment = target / (duration / 16);
-        let current = start;
         
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            
-            // Format numbers with + sign if needed
-            const displayValue = Math.floor(current);
-            const originalText = element.textContent;
-            if (originalText.includes('+')) {
-                element.textContent = displayValue + '+';
-            } else if (originalText.includes('$')) {
-                if (displayValue >= 1000000) {
-                    element.textContent = '$' + (displayValue / 1000000).toFixed(1) + 'M+';
-                } else if (displayValue >= 1000) {
-                    element.textContent = '$' + (displayValue / 1000).toFixed(0) + 'K';
-                } else {
-                    element.textContent = '$' + displayValue;
-                }
-            } else {
-                element.textContent = displayValue;
-            }
-        }, 16);
-    };
-    
-    // Animate statistics when they come into view
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumber = entry.target.querySelector('.stat-number');
-                if (statNumber && !statNumber.dataset.animated) {
-                    const text = statNumber.textContent;
-                    const number = parseInt(text.replace(/[^\d]/g, ''));
-                    if (number > 0) {
-                        statNumber.dataset.animated = 'true';
-                        animateNumbers(statNumber, number);
+        // Re-select after cloning
+        const newUpdateFilterButtons = document.querySelectorAll('.update-filter-btn');
+        newUpdateFilterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                newUpdateFilterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filterType = this.getAttribute('data-filter');
+                
+                // Filter update items
+                updateItems.forEach(item => {
+                    item.style.opacity = '';
+                    item.style.transform = '';
+                    item.style.transition = 'all 0.3s ease';
+                    
+                    if (filterType === 'all' || item.getAttribute('data-type') === filterType) {
+                        item.style.display = 'grid';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
                     }
-                }
-            }
+                });
+            });
         });
-    });
-    
-    const statElements = document.querySelectorAll('.stat-item, .summary-stat, .mentor-stat');
-    statElements.forEach(el => statsObserver.observe(el));
-});
+        
+        console.log('Update filters initialized successfully');
+    } else {
+        console.log('Update filter buttons or items not found');
+    }
+}

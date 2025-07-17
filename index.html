@@ -321,6 +321,7 @@
                         if (updatesTimeline) {
                             const recentUpdates = data.recent_updates.slice(0, 10); // Only first 10
                             const updatesHTML = portfolioData.renderRecentUpdates(recentUpdates);
+                            console.log('Generated updates HTML:', updatesHTML);
                             if (updatesHTML) {
                                 updatesTimeline.innerHTML = updatesHTML;
                                 console.log('Updated recent updates');
@@ -329,6 +330,11 @@
                     }
                     
                     console.log('Data population complete!');
+                    
+                    // Initialize all interactive elements after all data is loaded
+                    setTimeout(() => {
+                        initializePageInteractions();
+                    }, 500);
                 } else {
                     console.error('No data loaded');
                 }
@@ -336,6 +342,63 @@
                 console.error('Error in data loading:', error);
             }
         });
+        
+        // Function to initialize all page interactions after data is loaded
+        function initializePageInteractions() {
+            console.log('Initializing page interactions...');
+            
+            // Initialize update filters
+            const updateFilterButtons = document.querySelectorAll('.update-filter-btn');
+            const updateItems = document.querySelectorAll('.update-item');
+            
+            console.log('Found filter buttons:', updateFilterButtons.length);
+            console.log('Found update items:', updateItems.length);
+            
+            if (updateFilterButtons.length > 0 && updateItems.length > 0) {
+                updateFilterButtons.forEach(button => {
+                    // Remove any existing event listeners
+                    const newButton = button.cloneNode(true);
+                    button.parentNode.replaceChild(newButton, button);
+                });
+                
+                // Re-select after cloning
+                const freshFilterButtons = document.querySelectorAll('.update-filter-btn');
+                freshFilterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        console.log('Filter button clicked:', this.getAttribute('data-filter'));
+                        
+                        // Remove active class from all buttons
+                        freshFilterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filterType = this.getAttribute('data-filter');
+                        
+                        // Filter update items with animation
+                        updateItems.forEach(item => {
+                            const itemType = item.getAttribute('data-type');
+                            console.log('Item:', itemType, 'Filter:', filterType);
+                            
+                            if (filterType === 'all' || itemType === filterType) {
+                                item.style.display = 'grid';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'translateY(0)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'translateY(-10px)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+                console.log('Update filters initialized successfully');
+            } else {
+                console.log('Update filter buttons or items not found');
+            }
+        }
     </script>
     <script src="script.js"></script>
 </body>

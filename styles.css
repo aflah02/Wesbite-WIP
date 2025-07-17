@@ -337,7 +337,7 @@ body {
 
 .publications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -844,6 +844,15 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* News page filter buttons without bottom margin */
+.news-filter-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 0;
     flex-wrap: wrap;
     justify-content: center;
 }

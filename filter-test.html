@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { padding: 20px; }
+        .test-section { margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <h1>Filter Functionality Test</h1>
+    
+    <div class="test-section">
+        <h2>Recent Updates Filter Test</h2>
+        
+        <!-- Update Filters -->
+        <div class="update-filters">
+            <div class="update-filter-buttons">
+                <button class="update-filter-btn active" data-filter="all">All</button>
+                <button class="update-filter-btn" data-filter="papers">Papers</button>
+                <button class="update-filter-btn" data-filter="talks">Talks</button>
+                <button class="update-filter-btn" data-filter="career">Career Updates</button>
+            </div>
+        </div>
+        
+        <div class="updates-container">
+            <div class="updates-timeline">
+                <div class="update-item" data-type="papers">
+                    <div class="update-date">Jan 2025</div>
+                    <div class="update-content">
+                        <h3>New Paper Accepted</h3>
+                        <p>Test paper update</p>
+                    </div>
+                </div>
+                
+                <div class="update-item" data-type="talks">
+                    <div class="update-date">Dec 2024</div>
+                    <div class="update-content">
+                        <h3>Conference Presentation</h3>
+                        <p>Test talk update</p>
+                    </div>
+                </div>
+                
+                <div class="update-item" data-type="career">
+                    <div class="update-date">Nov 2024</div>
+                    <div class="update-content">
+                        <h3>Award Recognition</h3>
+                        <p>Test career update</p>
+                    </div>
+                </div>
+                
+                <div class="update-item" data-type="papers">
+                    <div class="update-date">Oct 2024</div>
+                    <div class="update-content">
+                        <h3>Another Paper</h3>
+                        <p>Another test paper update</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple filter test
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing filters...');
+            
+            const updateFilterButtons = document.querySelectorAll('.update-filter-btn');
+            const updateItems = document.querySelectorAll('.update-item');
+            
+            console.log('Found filter buttons:', updateFilterButtons.length);
+            console.log('Found update items:', updateItems.length);
+            
+            updateFilterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('Filter button clicked:', this.getAttribute('data-filter'));
+                    
+                    // Remove active class from all buttons
+                    updateFilterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterType = this.getAttribute('data-filter');
+                    
+                    // Filter update items
+                    updateItems.forEach(item => {
+                        const itemType = item.getAttribute('data-type');
+                        console.log('Checking item type:', itemType, 'against filter:', filterType);
+                        
+                        if (filterType === 'all' || itemType === filterType) {
+                            item.style.display = 'grid';
+                            item.style.opacity = '1';
+                            console.log('Showing item:', itemType);
+                        } else {
+                            item.style.display = 'none';
+                            console.log('Hiding item:', itemType);
+                        }
+                    });
+                });
+            });
+            
+            console.log('Filter initialization complete');
+        });
+    </script>
+</body>
+</html>
