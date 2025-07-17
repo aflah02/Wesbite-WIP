@@ -224,7 +224,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Publication Filtering (for publications page)
+// Publication Filtering (for publications page) - Now handled by data-loader.js after dynamic loading
+// This section is commented out as filtering is now initialized after publications are loaded
+/*
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const publicationItems = document.querySelectorAll('.publication-item');
@@ -287,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+*/
 
 // Load More Publications functionality
 document.addEventListener('DOMContentLoaded', function() {

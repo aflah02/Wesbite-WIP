@@ -119,5 +119,223 @@
       "title": "Keynote Speaker",
       "description": "Delivered a keynote presentation at [Conference] on \"Future Directions in [Your Field]\"."
     }
-  ]
+  ],
+  "publications": {
+    "2025": [
+      {
+        "type": "conference",
+        "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon",
+        "authors": "USVSN Sai Prashanth, Alvin Deng, Kyle O'Brien, Jyothir S V, Mohammad Aflah Khan, Jaydeep Borkar, Christopher A. Choquette-Choo, Jacob Ray Fuehne, Stella Biderman, Tracy Ke, Katherine Lee, Naomi Saphra",
+        "venue": "ICLR 2025 - The Thirteenth International Conference on Learning Representations",
+        "abstract": "This work examines memorization in language models as a multifaceted phenomenon, exploring the mechanisms through which models recite, reconstruct, and recollect information during training and inference.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2406.17746",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "conference",
+        "title": "Towards Reliable Latent Knowledge Estimation in LLMs: Zero-Prompt Many-Shot Based Factual Knowledge Extraction", 
+        "authors": "Qinyuan Wu, Mohammad Aflah Khan, Soumi Das, Vedant Nanda, Bishwamittra Ghosh, Camila Kolling, Till Speicher, Laurent Bindschaedler, Krishna P Gummadi, Evimaria Terzi",
+        "venue": "WSDM 2025 - Proceedings of the 18th ACM International Conference on Web Search and Data Mining",
+        "abstract": "We propose a novel approach for reliable estimation of latent knowledge in large language models using zero-prompt many-shot based factual knowledge extraction techniques.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2404.12957",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "conference",
+        "title": "QUENCH: Measuring the gap between Indic and Non-Indic Contextual General Reasoning in LLMs",
+        "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Sarah Masud, Md Shad Akhtar",
+        "venue": "COLING 2025 - Proceedings of the 31st International Conference on Computational Linguistics",
+        "abstract": "QUENCH is a manually curated benchmark from YouTube quiz videos that tests LLMs' world knowledge and reasoning through masked questions and rationales in a zero-shot setup.",
+        "links": {
+          "pdf": "https://aclanthology.org/2025.coling-main.303/",
+          "doi": "",
+          "code": "https://github.com/aflah02/QUENCH",
+          "data": ""
+        }
+      },
+      {
+        "type": "preprint",
+        "title": "Revisiting Privacy, Utility, and Efficiency Trade-offs when Fine-Tuning Large Language Models",
+        "authors": "Soumi Das, Camila Kolling, Mohammad Aflah Khan, Mahsa Amani, Bishwamittra Ghosh, Qinyuan Wu, Till Speicher, Krishna P. Gummadi",
+        "venue": "Under Review",
+        "abstract": "This work revisits the fundamental trade-offs between privacy, utility, and efficiency in the context of fine-tuning large language models, providing new insights and methodological approaches.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2502.13313",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "In Agents We Trust, but Who Do Agents Trust? Latent Source Preferences Steer LLM Generations",
+        "authors": "Mohammad Aflah Khan, Mahsa Amani, Soumi Das, Bishwamittra Ghosh, Qinyuan Wu, Krishna P. Gummadi, Manish Gupta, Abhilasha Ravichander",
+        "venue": "R2-FM @ ICML 2025 - Workshop on Reliable and Responsible Foundation Models",
+        "abstract": "LLMs show persistent bias toward reputable and authoritative sources in subjective decisions. These preferences resist prompt-based mitigation, underscoring the need to understand and control such biases from training.",
+        "links": {
+          "pdf": "https://openreview.net/forum?id=oZMisPPggL",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "Rethinking Memorization Measures in LLMs: Recollection vs. Counterfactual vs. Contextual Memorization",
+        "authors": "Bishwamittra Ghosh, Soumi Das, Qinyuan Wu, Mohammad Aflah Khan, Krishna P. Gummadi, Evimaria Terzi, Deepak Garg",
+        "venue": "MemFM @ ICML 2025 - The Impact of Memorization on Trustworthy Foundation Models",
+        "abstract": "We rethink memorization measures in large language models by distinguishing between recollection, counterfactual, and contextual memorization, providing a comprehensive framework for understanding different aspects of model memory.",
+        "links": {
+          "pdf": "https://openreview.net/forum?id=c6nqmjfG1Y",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "Rote Learning Considered Useful: Generalizing over Memorized Data in LLMs",
+        "authors": "Qinyuan Wu, Soumi Das, Mahsa Amani, Bishwamittra Ghosh, Mohammad Aflah Khan, Krishna P. Gummadi, Muhammad Bilal Zafar",
+        "venue": "MemFM @ ICML 2025 - The Impact of Memorization on Trustworthy Foundation Models",
+        "abstract": "This work challenges conventional wisdom about memorization in LLMs, demonstrating that rote learning can be beneficial for generalization when properly understood and leveraged.",
+        "links": {
+          "pdf": "https://openreview.net/forum?id=vNOA396J3q",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      }
+    ],
+    "2024": [
+      {
+        "type": "preprint",
+        "title": "Understanding the Mechanics and Dynamics of Memorisation in Large Language Models: A Case Study with Random Strings",
+        "authors": "Till Speicher, Mohammad Aflah Khan, Qinyuan Wu, Vedant Nanda, Soumi Das, Bishwamittra Ghosh, Krishna P. Gummadi, Evimaria Terzi",
+        "venue": "Under Review",
+        "abstract": "We conduct a comprehensive case study using random strings to understand the fundamental mechanics and dynamics of memorization in large language models.",
+        "links": {
+          "pdf": "https://openreview.net/forum?id=ILStlRb1Sp",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "The Duality of Hope: A Critical Examination of Controversial Annotations in HopeEDI",
+        "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Diksha Sethi*, Raghav Sahni*",
+        "venue": "The Second Tiny Papers Track at ICLR 2024",
+        "abstract": "This work critically examines controversial annotations in the HopeEDI dataset, revealing the dual nature of hope detection and its implications for automated content moderation.",
+        "links": {
+          "pdf": "https://openreview.net/forum?id=r6QZ8YKSBd",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "conference",
+        "title": "Probing Critical Learning Dynamics of PLMs for Hate Speech Detection",
+        "authors": "Sarah Masud*, Mohammad Aflah Khan*, Vikram Goyal, Md Shad Akhtar, Tanmoy Chakraborty",
+        "venue": "EACL 2024 - Findings of the Association for Computational Linguistics",
+        "abstract": "We probe the critical learning dynamics of pre-trained language models in the context of hate speech detection, revealing insights into model behavior and performance patterns.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2402.02144",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      }
+    ],
+    "2023": [
+      {
+        "type": "conference",
+        "title": "Overview of the HASOC Subtracks at FIRE 2023: Detection of Hate Spans and Conversational Hate-Speech",
+        "authors": "Shrey Satapara, Sarah Masud, Hiren Madhu, Mohammad Aflah Khan, Md Shad Akhtar, Tanmoy Chakraborty, Sandip Modha, Thomas Mandl",
+        "venue": "FIRE 2023 - Proceedings of the 15th Annual Meeting of the Forum for Information Retrieval Evaluation",
+        "abstract": "This paper provides a comprehensive overview of the HASOC subtracks at FIRE 2023, focusing on detection of hate spans and conversational hate speech in multilingual settings.",
+        "links": {
+          "pdf": "https://dl.acm.org/doi/abs/10.1145/3632754.3633277",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "Overview of the HASOC Subtrack at FIRE 2023: Identification of Tokens Contributing to Explicit Hate in English by Span Detection",
+        "authors": "Sarah Masud, Mohammad Aflah Khan, Md. Shad Akhtar, Tanmoy Chakraborty",
+        "venue": "In Working Notes of FIRE 2023 - Forum for Information Retrieval Evaluation",
+        "abstract": "We present an overview of the HASOC subtrack focused on identifying specific tokens that contribute to explicit hate speech through span detection techniques.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2311.09834",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "conference",
+        "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
+        "authors": "Stella Biderman, Hailey Schoelkopf, Quentin Gregory Anthony, Herbie Bradley, Kyle O'Brien, Eric Hallahan, Mohammad Aflah Khan, Shivanshu Purohit, USVSN Sai Prashanth, Edward Raff, Aviya Skowron, Lintang Sutawika, Oskar van der Wal",
+        "venue": "ICML 2023 - The Fortieth International Conference on Machine Learning",
+        "abstract": "The Pythia suite was developed with the explicit purpose of enabling research in interpretability, learning dynamics, and ethics and transparency for which existing model suites were inadequate.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2304.01373",
+          "doi": "",
+          "code": "https://github.com/EleutherAI/pythia",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "The Art of Embedding Fusion: Optimizing Hate Speech Detection",
+        "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Mohit Jain, Sanyam Goyal",
+        "venue": "The First Tiny Papers Track at ICLR 2023",
+        "abstract": "We explore optimal strategies for embedding fusion in hate speech detection systems, demonstrating improved performance through novel combination techniques.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2306.14939",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      },
+      {
+        "type": "workshop",
+        "title": "Beyond Negativity: Re-Analysis and Follow-Up Experiments on Hope Speech Detection",
+        "authors": "Neemesh Yadav*, Mohammad Aflah Khan*, Diksha Sethi, Raghav Sahni",
+        "venue": "The First Tiny Papers Track at ICLR 2023",
+        "abstract": "We conduct re-analysis and follow-up experiments on hope speech detection, moving beyond simple negativity detection to understand positive discourse patterns.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2306.01742",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      }
+    ],
+    "2022": [
+      {
+        "type": "conference",
+        "title": "Proactively Reducing the Hate Intensity of Online Posts via Hate Speech Normalization",
+        "authors": "Sarah Masud, Manjot Bedi, Mohammad Aflah Khan, Md Shad Akhtar, Tanmoy Chakraborty",
+        "venue": "KDD 2022 - Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "abstract": "We propose a novel approach for proactively reducing hate intensity in online posts through hate speech normalization techniques, enabling more constructive online discourse.",
+        "links": {
+          "pdf": "https://arxiv.org/abs/2206.04007",
+          "doi": "",
+          "code": "",
+          "data": ""
+        }
+      }
+    ]
+  }
 }

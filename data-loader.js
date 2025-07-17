@@ -57,12 +57,21 @@ class PortfolioData {
         if (!links) return '';
         
         const linkElements = [];
-        const linkOrder = ['pdf', 'doi', 'arxiv', 'code', 'data', 'slides', 'video', 'poster'];
+        const linkConfig = {
+            'pdf': { icon: 'fas fa-file-pdf', label: 'PDF' },
+            'doi': { icon: 'fas fa-external-link-alt', label: 'DOI' },
+            'arxiv': { icon: 'fas fa-external-link-alt', label: 'arXiv' },
+            'code': { icon: 'fab fa-github', label: 'Code' },
+            'data': { icon: 'fas fa-database', label: 'Data' },
+            'slides': { icon: 'fas fa-presentation', label: 'Slides' },
+            'video': { icon: 'fas fa-video', label: 'Video' },
+            'poster': { icon: 'fas fa-presentation', label: 'Poster' }
+        };
         
-        linkOrder.forEach(linkType => {
-            if (links[linkType] && links[linkType].trim()) {
-                const displayName = linkType.toUpperCase();
-                linkElements.push(`<a href="${links[linkType]}" class="pub-link">${displayName}</a>`);
+        Object.keys(linkConfig).forEach(linkType => {
+            if (links[linkType] && links[linkType].trim() && links[linkType] !== '#') {
+                const config = linkConfig[linkType];
+                linkElements.push(`<a href="${links[linkType]}" class="pub-link"><i class="${config.icon}"></i> ${config.label}</a>`);
             }
         });
         
@@ -98,27 +107,110 @@ class PortfolioData {
             if (!Array.isArray(yearPubs)) return '';
             
             const pubsHtml = yearPubs.map(pub => `
-                <div class="publication-item" data-type="${pub.type}">
-                    <div class="publication-number">${pub.number || ''}</div>
+                <article class="publication-item" data-type="${pub.type}">
                     <div class="publication-details">
                         <h3 class="publication-title">${pub.title}</h3>
                         <p class="publication-authors">${this.highlightAuthorName(pub.authors)}</p>
-                        <p class="publication-venue">${pub.venue}</p>
+                        <p class="publication-venue">
+                            <strong>${pub.venue}</strong>
+                        </p>
                         <p class="publication-abstract">${pub.abstract || ''}</p>
                         ${this.renderPublicationLinks(pub.links)}
                     </div>
-                </div>
+                </article>
             `).join('');
             
             return `
-                <div class="year-section" data-year="${year}">
-                    <h3 class="year-title">${year}</h3>
-                    <div class="publications-list">
-                        ${pubsHtml}
-                    </div>
+                <div class="year-section">
+                    <h2 class="year-title">${year}</h2>
+                    ${pubsHtml}
                 </div>
             `;
         }).join('');
+    }
+
+    // Function to load publications page
+    async loadPublicationsPage() {
+        try {
+            const data = await this.loadData();
+            if (!data || !data.publications) return;
+            
+            const publicationsContainer = document.querySelector('.publications-container');
+            if (publicationsContainer) {
+                const publicationsHtml = this.renderAllPublications(data.publications);
+                publicationsContainer.innerHTML = publicationsHtml;
+                
+                // Initialize filtering and search functionality after publications are loaded
+                this.initializePublicationFiltering();
+            }
+        } catch (error) {
+            console.error('Error loading publications page:', error);
+        }
+    }
+
+    // Function to initialize publication filtering and search after publications are loaded
+    initializePublicationFiltering() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('searchInput');
+
+        // Filter functionality
+        if (filterButtons.length > 0) {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterType = this.getAttribute('data-filter');
+                    const publicationItems = document.querySelectorAll('.publication-item');
+                    
+                    publicationItems.forEach(item => {
+                        // Reset any previous styles that might cause hiding
+                        item.style.opacity = '';
+                        item.style.transform = '';
+                        item.style.transition = '';
+                        
+                        if (filterType === 'all' || item.getAttribute('data-type') === filterType) {
+                            item.style.display = 'grid';
+                            item.classList.add('fade-in');
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+        }
+
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const publicationItems = document.querySelectorAll('.publication-item');
+                
+                publicationItems.forEach(item => {
+                    const title = item.querySelector('.publication-title')?.textContent.toLowerCase() || '';
+                    const authors = item.querySelector('.publication-authors')?.textContent.toLowerCase() || '';
+                    const venue = item.querySelector('.publication-venue')?.textContent.toLowerCase() || '';
+                    const abstract = item.querySelector('.publication-abstract')?.textContent.toLowerCase() || '';
+                    
+                    // Reset any previous styles
+                    item.style.opacity = '';
+                    item.style.transform = '';
+                    item.style.transition = '';
+                    
+                    if (searchTerm === '' || title.includes(searchTerm) || authors.includes(searchTerm) || 
+                        venue.includes(searchTerm) || abstract.includes(searchTerm)) {
+                        item.style.display = 'grid';
+                        item.classList.add('fade-in');
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('fade-in');
+                    }
+                });
+            });
+        }
     }
 
     // Utility function to render recent updates

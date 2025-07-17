@@ -914,9 +914,7 @@ body {
 }
 
 .publication-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 30px;
+    display: block;
     margin-bottom: 40px;
     padding: 30px;
     background: white;
@@ -932,14 +930,6 @@ body {
 .publication-item:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px) !important;
-}
-
-.publication-number {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #4f46e5;
-    text-align: center;
-    padding-top: 5px;
 }
 
 .publication-details h3 {
