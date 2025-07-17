@@ -289,6 +289,21 @@ class PortfolioData {
         `).join('');
     }
 
+    // Utility function to render recent updates for homepage (uses different CSS structure)
+    renderRecentUpdatesForHomepage(updates) {
+        if (!updates || !Array.isArray(updates)) return '';
+        
+        return updates.map(update => `
+            <div class="update-item" data-type="${update.type}">
+                <div class="update-date">${update.date}</div>
+                <div class="update-content">
+                    <h3>${update.title}</h3>
+                    <p>${update.description}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
     // Utility function to render social links
     renderSocialLinks(socialLinks) {
         if (!socialLinks) return '';
@@ -400,7 +415,6 @@ class PortfolioData {
         
         return newsUpdates.map(news => {
             const [month, year] = news.date.split(' ');
-            const tags = news.tags ? news.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
             
             return `
                 <div class="news-item" data-type="${news.type}">
@@ -412,7 +426,6 @@ class PortfolioData {
                         <div class="news-category">${news.category}</div>
                         <h3 class="news-title">${news.title}</h3>
                         <p class="news-description">${news.description}</p>
-                        <div class="news-tags">${tags}</div>
                     </div>
                 </div>
             `;

@@ -56,68 +56,197 @@
     }
   ],
   "recent_updates": [
+      {
+      "date": "July 2025",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Three Workshop Papers Accepted at ICML 2025",
+      "description": "Thrilled to share that our research on AI Agents, rethinking memorization metrics in LLMs, and generalization over memorized data has been accepted to the MemFM and R2-FM workshops at ICML 2025!",
+      "tags": ["ICML", "Research", "Publication"]
+    },
+    {
+      "date": "Apr 2025",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Talk on LLMs at Scale",
+      "description": "Presented talks on large language models at scale at Max Planck Computing and Data Facility (MPCDF AI Kick-off Workshop) and Max Planck Institute for the Science of Light (Hosted by Florian Marquardt).",
+      "tags": ["LLMs", "Scale", "Max Planck", "Talk"]
+    },
+    {
+      "date": "Feb 2025",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Overview of DeepSeek-{V3/R1}",
+      "description": "Presented an overview of DeepSeek-V3 and DeepSeek-R1 models at Max Planck Institute for Software Systems as part of the AI, Computing & Society Initiative.",
+      "tags": ["DeepSeek", "MPI-SWS", "AI Initiative", "Talk"]
+    },
+    {
+      "date": "Feb 2025",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Preprint on Privacy vs Efficiency Trade-offs",
+      "description": "Released preprint exploring the trade-offs between privacy, utility, and efficiency in fine-tuning large language models.",
+      "tags": ["Preprint", "Privacy", "Fine-tuning"]
+    },
+    {
+      "date": "Jan 2025",
+      "type": "papers", 
+      "category": "Papers & Publications",
+      "title": "QUENCH Dataset Accepted at COLING 2025",
+      "description": "Our benchmark for measuring the gap between Indic and Non-Indic contextual reasoning in LLMs has been accepted to COLING 2025.",
+      "tags": ["COLING", "Dataset", "Benchmark"]
+    },
     {
       "date": "Jan 2025",
       "type": "papers",
-      "category": "Papers & Publications",
-      "title": "New Paper Accepted",
-      "description": "Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!"
+      "category": "Papers & Publications", 
+      "title": "Privacy Research Accepted at WSDM 2025",
+      "description": "Our work on reliable latent knowledge estimation in LLMs using zero-prompt many-shot approaches has been accepted to WSDM 2025.",
+      "tags": ["WSDM", "Privacy", "LLMs"]
     },
     {
       "date": "Dec 2024",
       "type": "talks",
       "category": "Talks & Presentations",
-      "title": "Conference Presentation",
-      "description": "Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!"
+      "title": "Democratizing and Accelerating Research with LLMs",
+      "description": "Presented on making science more accessible whilst finding interesting research problems with LLMs at Max Planck Institute for Security and Privacy (Hosted by Meeyoung Cha).",
+      "tags": ["LLMs", "Research", "MPI-SP", "Talk"]
     },
     {
-      "date": "Nov 2024",
-      "type": "career",
-      "category": "Career Updates",
-      "title": "Award Recognition",
-      "description": "Honored to receive the [Award Name] for [achievement/contribution]."
-    },
-    {
-      "date": "Oct 2024",
-      "type": "career",
-      "category": "Career Updates",
-      "title": "New Collaboration",
-      "description": "Started an exciting collaboration with [Institution/Company] on [project topic]."
-    },
-    {
-      "date": "Sep 2024",
-      "type": "career",
-      "category": "Career Updates", 
-      "title": "Research Grant Awarded",
-      "description": "Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years."
-    },
-    {
-      "date": "Aug 2024",
-      "type": "media",
-      "category": "Media Coverage",
-      "title": "Research Featured in Tech News",
-      "description": "Our breakthrough research was highlighted in [Tech Publication], showcasing its potential impact on the field."
+      "date": "Dec 2024",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Empowering Research with Open-Access LLMs",
+      "description": "Gave a demo and lightning talk on empowering research with open-access LLMs at the AI, Computing & Society Initiative Launch Event at MPI-SWS.",
+      "tags": ["Open-Access", "LLMs", "Demo", "MPI-SWS"]
     },
     {
       "date": "Jul 2024",
       "type": "talks",
       "category": "Talks & Presentations",
-      "title": "Workshop Organization",
-      "description": "Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide."
+      "title": "Paper Reading: Lookback Lens for Contextual Hallucinations",
+      "description": "Led paper reading and discussion on 'Lookback Lens: Detecting and Mitigating Contextual Hallucinations in Large Language Models Using Only Attention Maps' at MPI-SWS internal paper reading group.",
+      "tags": ["Paper Reading", "Hallucinations", "MPI-SWS", "Discussion"]
     },
     {
       "date": "Jun 2024",
-      "type": "media",
-      "category": "Media Coverage",
-      "title": "Media Coverage",
-      "description": "Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research."
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "EACL 2024 Paper on Hate Speech Detection",
+      "description": "Our research on critical learning dynamics of PLMs for hate speech detection was published in EACL 2024 Findings.",
+      "tags": ["EACL", "Hate Speech", "PLMs"]
     },
     {
       "date": "May 2024",
       "type": "talks",
       "category": "Talks & Presentations",
-      "title": "Keynote Speaker",
-      "description": "Delivered a keynote presentation at [Conference] on \"Future Directions in [Your Field]\"."
+      "title": "Paper Reading: Deduplicating Training Data Makes Language Models Better",
+      "description": "Led paper reading and discussion on 'Deduplicating Training Data Makes Language Models Better' at MPI-SWS internal paper reading group.",
+      "tags": ["Paper Reading", "Deduplication", "MPI-SWS", "Discussion"]
+    },
+    {
+      "date": "May 2024",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Workshop Paper at ICLR 2024",
+      "description": "Our work on fixing the HopeEDI Dataset has been accepted in the Tiny Paper track of ICLR 2024.",
+      "tags": ["ICLR", "Workshop", "Social Good"]
+    },
+    {
+      "date": "May 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Graduated from IIIT Delhi",
+      "description": "Graduated with a B.Tech in Computer Science and Engineering from IIIT Delhi.",
+      "tags": ["Career", "MPI-SWS", "Research"]
+    },
+    {
+      "date": "April 2024",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Joined Max Planck Institute for Software Systems Full Time",
+      "description": "Transitioned from a part-time to a full-time position as Research Software Engineer at MPI-SWS, focusing on understanding and evaluating large language models.",
+      "tags": ["Career", "MPI-SWS", "Research"]
+    },
+    {
+      "date": "Nov 2023",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Transitioned to a part-time role at Max Planck Institute for Software Systems",
+      "description": "I will be working part-time at MPI-SWS. My focus will be on memorization in LLMs, improving inference efficiency and latent knowledge estimation in LLMs.",
+      "tags": ["Career", "MPI-SWS", "Research"]
+    },
+    {
+      "date": "Aug 2023",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Joined Max Planck Institute for Software Systems as an Intern",
+      "description": "I will be interning at MPI-SWS under the guidance of Krishna Gummadi, focusing on memorization in large language models.",
+      "tags": ["Career", "MPI-SWS", "Research"]
+    },
+    {
+      "date": "Aug 2023",
+      "type": "media",
+      "category": "Media Coverage",
+      "title": "EleutherAI Contributor Spotlight",
+      "description": "I was featured in the <a href='https://blog.eleuther.ai/contributor-spotlight-1/' target='_blank'>First EleutherAI Contributor Spotlight</a>.",
+      "tags": ["Media", "Pythia", "Interpretability"]
+    },
+    {
+      "date": "Aug 2023",
+      "type": "media",
+      "category": "Media Coverage",
+      "title": "Pythia Suite Featured in KDNuggets",
+      "description": "Our Pythia model suite was featured <a href='https://www.kdnuggets.com/2023/08/pythia-suite-16-llms-indepth-research.html' target='_blank'>in KDNuggets</a>, emphasizing its contribution to interpretability research.",
+      "tags": ["Media", "Pythia", "Interpretability"]
+    },
+    {
+      "date": "Jul 2023",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Pythia: A Suite for Analyzing Large Language Models",
+      "description": "Gave an invited talk about the Pythia suite for analyzing large language models across training and scaling at Max Planck Institute for Software Systems (Hosted by Krishna Gummadi).",
+      "tags": ["Pythia", "LLMs", "MPI-SWS", "Talk"]
+    },
+    {
+      "date": "Jun 2023",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Pythia Suite at Goldman Sachs",
+      "description": "Presented the Pythia suite at Goldman Sachs internal NLP/IR reading group, discussing large language model analysis and scaling.",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
+    },
+    {
+      "date": "May 2023",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "Workshop Papers at ICLR 2023",
+      "description": "Our works on hope speech detection and embedding fusion for hate speech detection were accepted in the Tiny Paper track of ICLR 2024.",
+      "tags": ["ICLR", "Workshop", "Social Good"]
+    },
+    {
+      "date": "May 2023",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Summer Analyst @ Goldman Sachs",
+      "description": "I will be interning as a Summer Analyst at Goldman Sachs, working in the Finance, Planning & Analysis team.",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
+    },
+    {
+      "date": "Aug 2022",
+      "type": "papers",
+      "category": "Papers & Publications",
+      "title": "HateNorm has been accepted at KDD 2022 (My first paper 🚀)",
+      "description": "Our work on reducing the intensity of hate speech in online comments using HateNorm has been accepted at KDD 2022.",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
+    },
+    {
+      "date": "May 2022",
+      "type": "career",
+      "category": "Career Updates",
+      "title": "Google Summer of Code @ TensorFlow",
+      "description": "I am one of the two people selected to work on the KerasNLP project as part of Google Summer of Code 2022.",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
     }
   ],
   "publications": {

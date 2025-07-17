@@ -144,68 +144,9 @@
                 
                 <div class="updates-container">
                     <div class="updates-timeline">
-                        <div class="update-item" data-type="papers">
-                            <div class="update-date">Jan 2025</div>
-                            <div class="update-content">
-                                <h3>New Paper Accepted</h3>
-                                <p>Excited to announce that our paper on [topic] has been accepted to [Conference/Journal]!</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="talks">
-                            <div class="update-date">Dec 2024</div>
-                            <div class="update-content">
-                                <h3>Conference Presentation</h3>
-                                <p>Presented our latest research at [Conference Name] in [Location]. Great discussions and feedback!</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="career">
-                            <div class="update-date">Nov 2024</div>
-                            <div class="update-content">
-                                <h3>Award Recognition</h3>
-                                <p>Honored to receive the [Award Name] for [achievement/contribution].</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="career">
-                            <div class="update-date">Oct 2024</div>
-                            <div class="update-content">
-                                <h3>New Collaboration</h3>
-                                <p>Started an exciting collaboration with [Institution/Company] on [project topic].</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="career">
-                            <div class="update-date">Sep 2024</div>
-                            <div class="update-content">
-                                <h3>Research Grant Awarded</h3>
-                                <p>Received funding from [Funding Agency] for our research on [research topic]. This will support our work for the next 3 years.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="talks">
-                            <div class="update-date">Aug 2024</div>
-                            <div class="update-content">
-                                <h3>Workshop Organization</h3>
-                                <p>Successfully organized the [Workshop Name] with 100+ attendees from leading institutions worldwide.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="papers">
-                            <div class="update-date">Jul 2024</div>
-                            <div class="update-content">
-                                <h3>Media Coverage</h3>
-                                <p>Our recent work on [topic] was featured in [Media Outlet], highlighting the real-world impact of our research.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item" data-type="talks">
-                            <div class="update-date">Jun 2024</div>
-                            <div class="update-content">
-                                <h3>Keynote Speaker</h3>
-                                <p>Delivered a keynote presentation at [Conference] on "Future Directions in [Your Field]".</p>
-                            </div>
+                        <!-- Recent updates will be populated from data.json (top 10 only) -->
+                        <div class="loading-message">
+                            <p>Loading recent updates...</p>
                         </div>
                     </div>
                 </div>
@@ -320,7 +261,7 @@
                         const updatesTimeline = document.querySelector('.updates-timeline');
                         if (updatesTimeline) {
                             const recentUpdates = data.recent_updates.slice(0, 10); // Only first 10
-                            const updatesHTML = portfolioData.renderRecentUpdates(recentUpdates);
+                            const updatesHTML = portfolioData.renderRecentUpdatesForHomepage(recentUpdates);
                             console.log('Generated updates HTML:', updatesHTML);
                             if (updatesHTML) {
                                 updatesTimeline.innerHTML = updatesHTML;
