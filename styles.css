@@ -964,6 +964,59 @@ body {
     margin-bottom: 20px;
 }
 
+.abstract-section {
+    margin-bottom: 20px;
+}
+
+.abstract-toggle {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #4f46e5;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.abstract-toggle:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+.abstract-toggle i {
+    margin-right: 5px;
+    transition: transform 0.2s ease;
+}
+
+.publication-abstract {
+    color: #64748b;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border-left: 4px solid #4f46e5;
+    transition: all 0.3s ease;
+}
+
+.publication-abstract.abstract-show {
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .publication-links {
     display: flex;
     gap: 12px;

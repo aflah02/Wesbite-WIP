@@ -65,13 +65,14 @@ class PortfolioData {
             'data': { icon: 'fas fa-database', label: 'Data' },
             'slides': { icon: 'fas fa-presentation', label: 'Slides' },
             'video': { icon: 'fas fa-video', label: 'Video' },
-            'poster': { icon: 'fas fa-presentation', label: 'Poster' }
+            'poster': { icon: 'fas fa-presentation', label: 'Poster' },
+            'huggingface': { icon: 'fas fa-box', label: 'Hugging Face' }
         };
         
         Object.keys(linkConfig).forEach(linkType => {
             if (links[linkType] && links[linkType].trim() && links[linkType] !== '#') {
                 const config = linkConfig[linkType];
-                linkElements.push(`<a href="${links[linkType]}" class="pub-link"><i class="${config.icon}"></i> ${config.label}</a>`);
+                linkElements.push(`<a href="${links[linkType]}" class="pub-link" target="_blank"><i class="${config.icon}"></i> ${config.label}</a>`);
             }
         });
         
@@ -106,7 +107,7 @@ class PortfolioData {
             const yearPubs = publications[year];
             if (!Array.isArray(yearPubs)) return '';
             
-            const pubsHtml = yearPubs.map(pub => `
+            const pubsHtml = yearPubs.map((pub, index) => `
                 <article class="publication-item" data-type="${pub.type}">
                     <div class="publication-details">
                         <h3 class="publication-title">${pub.title}</h3>
@@ -114,7 +115,14 @@ class PortfolioData {
                         <p class="publication-venue">
                             <strong>${pub.venue}</strong>
                         </p>
-                        <p class="publication-abstract">${pub.abstract || ''}</p>
+                        <div class="abstract-section">
+                            <button class="abstract-toggle" data-target="abstract-${year}-${index}">
+                                <i class="fas fa-chevron-down"></i> Show Abstract
+                            </button>
+                            <div class="publication-abstract" id="abstract-${year}-${index}" style="display: none;">
+                                ${pub.abstract || ''}
+                            </div>
+                        </div>
                         ${this.renderPublicationLinks(pub.links)}
                     </div>
                 </article>
@@ -152,6 +160,7 @@ class PortfolioData {
     initializePublicationFiltering() {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const searchInput = document.getElementById('searchInput');
+        const self = this; // Store reference to class instance
 
         // Filter functionality
         if (filterButtons.length > 0) {
@@ -172,13 +181,16 @@ class PortfolioData {
                         item.style.transition = '';
                         
                         if (filterType === 'all' || item.getAttribute('data-type') === filterType) {
-                            item.style.display = 'grid';
+                            item.style.display = 'block';
                             item.classList.add('fade-in');
                         } else {
                             item.style.display = 'none';
                             item.classList.remove('fade-in');
                         }
                     });
+                    
+                    // Hide/show year sections based on visible publications
+                    self.updateYearSectionVisibility();
                 });
             });
         }
@@ -202,15 +214,64 @@ class PortfolioData {
                     
                     if (searchTerm === '' || title.includes(searchTerm) || authors.includes(searchTerm) || 
                         venue.includes(searchTerm) || abstract.includes(searchTerm)) {
-                        item.style.display = 'grid';
+                        item.style.display = 'block';
                         item.classList.add('fade-in');
                     } else {
                         item.style.display = 'none';
                         item.classList.remove('fade-in');
                     }
                 });
+                
+                // Hide/show year sections based on visible publications
+                self.updateYearSectionVisibility();
             });
         }
+
+        // Abstract toggle functionality
+        const abstractToggleButtons = document.querySelectorAll('.abstract-toggle');
+        abstractToggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const abstractDiv = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+                
+                if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
+                    // Show abstract
+                    abstractDiv.style.display = 'block';
+                    this.innerHTML = '<i class="fas fa-chevron-up"></i> Hide Abstract';
+                    abstractDiv.classList.add('abstract-show');
+                } else {
+                    // Hide abstract
+                    abstractDiv.style.display = 'none';
+                    this.innerHTML = '<i class="fas fa-chevron-down"></i> Show Abstract';
+                    abstractDiv.classList.remove('abstract-show');
+                }
+            });
+        });
+    }
+
+    // Function to update year section visibility based on visible publications
+    updateYearSectionVisibility() {
+        const yearSections = document.querySelectorAll('.year-section');
+        
+        yearSections.forEach(yearSection => {
+            const publicationItems = yearSection.querySelectorAll('.publication-item');
+            let hasVisiblePublications = false;
+            
+            // Check if any publication in this year section is visible
+            publicationItems.forEach(item => {
+                if (item.style.display !== 'none') {
+                    hasVisiblePublications = true;
+                }
+            });
+            
+            // Show/hide the entire year section based on whether it has visible publications
+            if (hasVisiblePublications) {
+                yearSection.style.display = 'block';
+            } else {
+                yearSection.style.display = 'none';
+            }
+        });
     }
 
     // Utility function to render recent updates

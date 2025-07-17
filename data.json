@@ -127,12 +127,13 @@
         "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon",
         "authors": "USVSN Sai Prashanth, Alvin Deng, Kyle O'Brien, Jyothir S V, Mohammad Aflah Khan, Jaydeep Borkar, Christopher A. Choquette-Choo, Jacob Ray Fuehne, Stella Biderman, Tracy Ke, Katherine Lee, Naomi Saphra",
         "venue": "ICLR 2025 - The Thirteenth International Conference on Learning Representations",
-        "abstract": "This work examines memorization in language models as a multifaceted phenomenon, exploring the mechanisms through which models recite, reconstruct, and recollect information during training and inference.",
+        "abstract": "Memorization in language models is typically treated as a homogenous phenomenon, neglecting the specifics of the memorized data. We instead model memorization as the effect of a set of complex factors that describe each sample and relate it to the model and corpus. To build intuition around these factors, we break memorization down into a taxonomy: recitation of highly duplicated sequences, reconstruction of inherently predictable sequences, and recollection of sequences that are neither. We demonstrate the usefulness of our taxonomy by using it to construct a predictive model for memorization. By analyzing dependencies and inspecting the weights of the predictive model, we find that different factors influence the likelihood of memorization differently depending on the taxonomic category.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2406.17746",
+          "pdf": "https://arxiv.org/pdf/2406.17746",
           "doi": "",
-          "code": "",
-          "data": ""
+          "code": "https://github.com/EleutherAI/semantic-memorization",
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2406.17746"
         }
       },
       {
@@ -140,12 +141,13 @@
         "title": "Towards Reliable Latent Knowledge Estimation in LLMs: Zero-Prompt Many-Shot Based Factual Knowledge Extraction", 
         "authors": "Qinyuan Wu, Mohammad Aflah Khan, Soumi Das, Vedant Nanda, Bishwamittra Ghosh, Camila Kolling, Till Speicher, Laurent Bindschaedler, Krishna P Gummadi, Evimaria Terzi",
         "venue": "WSDM 2025 - Proceedings of the 18th ACM International Conference on Web Search and Data Mining",
-        "abstract": "We propose a novel approach for reliable estimation of latent knowledge in large language models using zero-prompt many-shot based factual knowledge extraction techniques.",
+        "abstract": "In this paper, we focus on the challenging task of reliably estimating factual knowledge that is embedded inside large language models (LLMs). To avoid reliability concerns with prior approaches, we propose to eliminate prompt engineering when probing LLMs for factual knowledge. Our approach, called Zero-Prompt Latent Knowledge Estimator (ZP-LKE), leverages the in-context learning ability of LLMs to communicate both the factual knowledge question as well as the expected answer format. Our knowledge estimator is both conceptually simpler (i.e., doesn't depend on meta-linguistic judgments of LLMs) and easier to apply (i.e., is not LLM-specific), and we demonstrate that it can surface more of the latent knowledge embedded in LLMs. We also investigate how different design choices affect the performance of ZP-LKE. Using the proposed estimator, we perform a large-scale evaluation of the factual knowledge of a variety of open-source LLMs, like OPT, Pythia, Llama(2), Mistral, Gemma, etc. over a large set of relations and facts from the Wikidata knowledge base. We observe differences in the factual knowledge between different model families and models of different sizes, that some relations are consistently better known than others but that models differ in the precise facts they know, and differences in the knowledge of base models and their finetuned counterparts.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2404.12957",
-          "doi": "",
+          "pdf": "https://arxiv.org/pdf/2404.12957",
+          "doi": "https://dl.acm.org/doi/10.1145/3701551.3703562",
           "code": "",
-          "data": ""
+          "data": "https://github.com/QinyuanWu0710/ZeroPrompt_LKE",
+          "arxiv": "https://arxiv.org/abs/2404.12957"
         }
       },
       {
@@ -153,25 +155,27 @@
         "title": "QUENCH: Measuring the gap between Indic and Non-Indic Contextual General Reasoning in LLMs",
         "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Sarah Masud, Md Shad Akhtar",
         "venue": "COLING 2025 - Proceedings of the 31st International Conference on Computational Linguistics",
-        "abstract": "QUENCH is a manually curated benchmark from YouTube quiz videos that tests LLMs' world knowledge and reasoning through masked questions and rationales in a zero-shot setup.",
+        "abstract": "The rise of large language models (LLMs) has created a need for advanced benchmarking systems beyond traditional setups. To this end, we introduce QUENCH, a novel text-based English Quizzing Benchmark manually curated and transcribed from YouTube quiz videos. QUENCH possesses masked entities and rationales for the LLMs to predict via generation. At the intersection of geographical context and common sense reasoning, QUENCH helps assess world knowledge and deduction capabilities of LLMs via a zero-shot, open-domain quizzing setup. We perform an extensive evaluation on 7 LLMs and 4 metrics, investigating the influence of model size, prompting style, geographical context, and gold-labeled rationale generation. The benchmarking concludes with an error analysis to which the LLMs are prone.",
         "links": {
-          "pdf": "https://aclanthology.org/2025.coling-main.303/",
+          "pdf": "https://aclanthology.org/2025.coling-main.303.pdf",
           "doi": "",
           "code": "https://github.com/aflah02/QUENCH",
-          "data": ""
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2412.11763"
         }
       },
       {
         "type": "preprint",
         "title": "Revisiting Privacy, Utility, and Efficiency Trade-offs when Fine-Tuning Large Language Models",
         "authors": "Soumi Das, Camila Kolling, Mohammad Aflah Khan, Mahsa Amani, Bishwamittra Ghosh, Qinyuan Wu, Till Speicher, Krishna P. Gummadi",
-        "venue": "Under Review",
-        "abstract": "This work revisits the fundamental trade-offs between privacy, utility, and efficiency in the context of fine-tuning large language models, providing new insights and methodological approaches.",
+        "venue": "Preprint",
+        "abstract": "We study the inherent trade-offs in minimizing privacy risks and maximizing utility, while maintaining high computational efficiency, when fine-tuning large language models (LLMs). A number of recent works in privacy research have attempted to mitigate privacy risks posed by memorizing fine-tuning data by using differentially private training methods (e.g., DP), albeit at a significantly higher computational cost (inefficiency). In parallel, several works in systems research have focussed on developing (parameter) efficient fine-tuning methods (e.g., LoRA), but few works, if any, investigated whether such efficient methods enhance or diminish privacy risks. In this paper, we investigate this gap and arrive at a surprising conclusion: efficient fine-tuning methods like LoRA mitigate privacy risks similar to private fine-tuning methods like DP. Our empirical finding directly contradicts prevailing wisdom that privacy and efficiency objectives are at odds during fine-tuning. Our finding is established by (a) carefully defining measures of privacy and utility that distinguish between memorizing sensitive and non-sensitive tokens in training and test datasets used in fine-tuning and (b) extensive evaluations using multiple open-source language models from Pythia, Gemma, and Llama families and different domain-specific datasets.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2502.13313",
+          "pdf": "https://arxiv.org/pdf/2502.13313",
           "doi": "",
           "code": "",
-          "data": ""
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2502.13313"
         }
       },
       {
@@ -179,11 +183,11 @@
         "title": "In Agents We Trust, but Who Do Agents Trust? Latent Source Preferences Steer LLM Generations",
         "authors": "Mohammad Aflah Khan, Mahsa Amani, Soumi Das, Bishwamittra Ghosh, Qinyuan Wu, Krishna P. Gummadi, Manish Gupta, Abhilasha Ravichander",
         "venue": "R2-FM @ ICML 2025 - Workshop on Reliable and Responsible Foundation Models",
-        "abstract": "LLMs show persistent bias toward reputable and authoritative sources in subjective decisions. These preferences resist prompt-based mitigation, underscoring the need to understand and control such biases from training.",
+        "abstract": "Large Language Model (LLM) agents are increasingly making choices on behalf of humans in different scenarios such as recommending news stories, searching for relevant related research papers, or deciding which product to buy. What drives LLMs' choices in subjective decision-making scenarios, where reasonable humans could have made different choices exercising their free will? In this work, we explore how LLMs' latent trust in (and preferences for) brand identities of the information source (e.g., author / publisher of news stories or research papers), credentials of the information source (e.g., reputation/dis-reputation badges and measures such as awards or PageRank), endorsements from other influential sources (e.g., recommendations from critics and reviewers) impacts the choices of agents powered by the LLMs. Our extensive experiments using 10 LLMs from 6 major providers provide the following insights. LLMs tend to prefer articles from reputed information sources. They also recognize domain expertise of information sources. We show that prompting alone does not help reduce favoritism towards preferred sources. Our work makes the case for better understanding the origins of LLMs' latent trust / preferences (i.e., during pre-training or through fine-tuning and instruction tuning) and for better control over these implicit biases (i.e., eliminate undesired biases and align desired biases with humans or societies represented by the LLM agents).",
         "links": {
-          "pdf": "https://openreview.net/forum?id=oZMisPPggL",
+          "pdf": "https://openreview.net/pdf?id=oZMisPPggL",
           "doi": "",
-          "code": "",
+          "code": "https://github.com/aflah02/LLM-Latent-Source-Preferences",
           "data": ""
         }
       },
@@ -192,9 +196,9 @@
         "title": "Rethinking Memorization Measures in LLMs: Recollection vs. Counterfactual vs. Contextual Memorization",
         "authors": "Bishwamittra Ghosh, Soumi Das, Qinyuan Wu, Mohammad Aflah Khan, Krishna P. Gummadi, Evimaria Terzi, Deepak Garg",
         "venue": "MemFM @ ICML 2025 - The Impact of Memorization on Trustworthy Foundation Models",
-        "abstract": "We rethink memorization measures in large language models by distinguishing between recollection, counterfactual, and contextual memorization, providing a comprehensive framework for understanding different aspects of model memory.",
+        "abstract": "Memorization in large language models (LLMs) is often viewed as undesirable for learning. Existing memorization measures largely focus on quantifying privacy risks, rather than capturing the underlying phenomenon of memorization itself. To address this gap, we introduce contextual memorization, which disentangles memorization from contextual learning – LLMs perform both during training. We further show that existing measures of memorization in LLMs, namely recollection-based, counterfactual, and contextual, yield contradictory results when applied to the same training dynamics, such as disagreeing on the order of memorization of strings of varying frequencies.",
         "links": {
-          "pdf": "https://openreview.net/forum?id=c6nqmjfG1Y",
+          "pdf": "https://openreview.net/pdf?id=c6nqmjfG1Y",
           "doi": "",
           "code": "",
           "data": ""
@@ -205,11 +209,11 @@
         "title": "Rote Learning Considered Useful: Generalizing over Memorized Data in LLMs",
         "authors": "Qinyuan Wu, Soumi Das, Mahsa Amani, Bishwamittra Ghosh, Mohammad Aflah Khan, Krishna P. Gummadi, Muhammad Bilal Zafar",
         "venue": "MemFM @ ICML 2025 - The Impact of Memorization on Trustworthy Foundation Models",
-        "abstract": "This work challenges conventional wisdom about memorization in LLMs, demonstrating that rote learning can be beneficial for generalization when properly understood and leveraged.",
+        "abstract": "Rote learning is a memorization technique based on repetition. It is commonly believed to hinder generalization by encouraging verbatim memorization rather than deeper understanding. This insight holds for even learning factual knowledge that inevitably requires a certain degree of memorization. In this work, we demonstrate that LLMs can be trained to generalize from rote memorized data. We introduce a two-phase “memorize-then-generalize” framework, where the model first rote memorizes facts using a semantically meaningless prompt and then learns to generalize by finetuning on a small set of semantically meaningful prompts. We show that LLMs can reinterpret rote memorized knowledge to reflect new semantics, as evidenced by the emergence of structured, semantically aligned latent representations. This surprising finding opens the door to both efficient and effective knowledge injection and possible risks of repurposing the memorized data for malicious usage.",
         "links": {
-          "pdf": "https://openreview.net/forum?id=vNOA396J3q",
+          "pdf": "https://openreview.net/pdf?id=vNOA396J3q",
           "doi": "",
-          "code": "",
+          "code": "https://github.com/QinyuanWu0710/memorize-then-generalize",
           "data": ""
         }
       }
@@ -219,10 +223,10 @@
         "type": "preprint",
         "title": "Understanding the Mechanics and Dynamics of Memorisation in Large Language Models: A Case Study with Random Strings",
         "authors": "Till Speicher, Mohammad Aflah Khan, Qinyuan Wu, Vedant Nanda, Soumi Das, Bishwamittra Ghosh, Krishna P. Gummadi, Evimaria Terzi",
-        "venue": "Under Review",
-        "abstract": "We conduct a comprehensive case study using random strings to understand the fundamental mechanics and dynamics of memorization in large language models.",
+        "venue": "Preprint",
+        "abstract": "Understanding whether and to what extent large language models (LLMs) have memorised training data has important implications for the privacy of its training data and the reliability of its generated output. In this work, we focus on the more foundational question of how LLMs memorise training data. To this end, we systematically train LLMs of different sizes to memorise random token strings of different lengths and different entropies (i.e., sampled from different alphabet distributions) and study their ability to recall the strings. We observe many striking memorisation dynamics including (i) memorisation in phases with the alphabet distributions in the random strings being learnt before their relative positions in the string are memorised and (ii) memorisation in parts at the granularity of individual tokens, but not necessarily in the order in which they appear in the string. Next, we investigate memorisation mechanics by checking to what extent different parts of a token’s prefix in the string are necessary and sufficient to recollect the token. We leverage our insights to explain the dynamics of memorising strings and we conclude by discussing the implications of our findings for quantifying memorisation.",
         "links": {
-          "pdf": "https://openreview.net/forum?id=ILStlRb1Sp",
+          "pdf": "https://openreview.net/pdf?id=ILStlRb1Sp",
           "doi": "",
           "code": "",
           "data": ""
@@ -233,11 +237,11 @@
         "title": "The Duality of Hope: A Critical Examination of Controversial Annotations in HopeEDI",
         "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Diksha Sethi*, Raghav Sahni*",
         "venue": "The Second Tiny Papers Track at ICLR 2024",
-        "abstract": "This work critically examines controversial annotations in the HopeEDI dataset, revealing the dual nature of hope detection and its implications for automated content moderation.",
+        "abstract": "This study investigates the HopeEDI hope speech dataset, revealing a significant number of potentially controversial annotations, notably tied to the 'All Lives Matter' movement. We have also identified instances where hateful/toxic/implicitly controversial content was wrongly marked as hopeful. The implications for deploying models trained on this dataset are profound, risking biases and stigmatization. We advocate for thoroughly examining the HopeEDI dataset, cautioning against biased models. We reannotate the hope speech and non-english labelled text, introducing a new class, 'Potentially Controversial', providing reasons for why the label was changed. This updated dataset aims to promote balance and mitigate ethical concerns in real-world applications.",
         "links": {
-          "pdf": "https://openreview.net/forum?id=r6QZ8YKSBd",
+          "pdf": "https://openreview.net/pdf?id=r6QZ8YKSBd",
           "doi": "",
-          "code": "",
+          "code": "https://github.com/aflah02/HopeEDI-Fix",
           "data": ""
         }
       },
@@ -246,40 +250,43 @@
         "title": "Probing Critical Learning Dynamics of PLMs for Hate Speech Detection",
         "authors": "Sarah Masud*, Mohammad Aflah Khan*, Vikram Goyal, Md Shad Akhtar, Tanmoy Chakraborty",
         "venue": "EACL 2024 - Findings of the Association for Computational Linguistics",
-        "abstract": "We probe the critical learning dynamics of pre-trained language models in the context of hate speech detection, revealing insights into model behavior and performance patterns.",
+        "abstract": "Despite the widespread adoption, there is a lack of research into how various critical aspects of pretrained language models (PLMs) affect their performance in hate speech detection. Through five research questions, our findings and recommendations lay the groundwork for empirically investigating different aspects of PLMs' use in hate speech detection. We deep dive into comparing different pretrained models, evaluating their seed robustness, finetuning settings, and the impact of pretraining data collection time. Our analysis reveals early peaks for downstream tasks during pretraining, the limited benefit of employing a more recent pretraining corpus, and the significance of specific layers during finetuning. We further call into question the use of domain-specific models and highlight the need for dynamic datasets for benchmarking hate speech detection.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2402.02144",
+          "pdf": "https://aclanthology.org/2024.findings-eacl.55.pdf",
           "doi": "",
-          "code": "",
-          "data": ""
+          "code": "https://github.com/LCS2-IIITD/HateFinetune",
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2402.02144",
+          "video": "https://aclanthology.org/2024.findings-eacl.55.mp4"
         }
       }
     ],
     "2023": [
       {
-        "type": "conference",
+        "type": "extended",
         "title": "Overview of the HASOC Subtracks at FIRE 2023: Detection of Hate Spans and Conversational Hate-Speech",
         "authors": "Shrey Satapara, Sarah Masud, Hiren Madhu, Mohammad Aflah Khan, Md Shad Akhtar, Tanmoy Chakraborty, Sandip Modha, Thomas Mandl",
         "venue": "FIRE 2023 - Proceedings of the 15th Annual Meeting of the Forum for Information Retrieval Evaluation",
-        "abstract": "This paper provides a comprehensive overview of the HASOC subtracks at FIRE 2023, focusing on detection of hate spans and conversational hate speech in multilingual settings.",
+        "abstract": "The proliferation of hateful content on Social Media has drawn a lot of attention lately, which has prompted practitioners to develop systems that can recognize this kind of content automatically. The evaluation requires reliable benchmark data and evaluation techniques. This paper reports on two sub-tracks related to Hate Speech detection. The task ICHCL provided a dataset in code-mixed Hindi, which includes the conversational context of a tweet. In many cases, including the context is necessary for detecting the hatefulness of the tweet. The best submission reached an F1 measure of 0.8. The task HateNorm (Identification of Tokens Contributing to Explicit Hate in English by Span Detection) introduced a span annotated dataset and required systems to find a sequence of words relevant to the hatefulness of a post. The highest scoring system obtained a macro-F1 of 0.581.",
         "links": {
-          "pdf": "https://dl.acm.org/doi/abs/10.1145/3632754.3633277",
-          "doi": "",
+          "pdf": "",
+          "doi": "https://dl.acm.org/doi/10.1145/3632754.3633277",
           "code": "",
           "data": ""
         }
       },
       {
-        "type": "workshop",
+        "type": "extended",
         "title": "Overview of the HASOC Subtrack at FIRE 2023: Identification of Tokens Contributing to Explicit Hate in English by Span Detection",
         "authors": "Sarah Masud, Mohammad Aflah Khan, Md. Shad Akhtar, Tanmoy Chakraborty",
         "venue": "In Working Notes of FIRE 2023 - Forum for Information Retrieval Evaluation",
-        "abstract": "We present an overview of the HASOC subtrack focused on identifying specific tokens that contribute to explicit hate speech through span detection techniques.",
+        "abstract": "As hate speech continues to proliferate on the web, it is becoming increasingly important to develop computational methods to mitigate it. Reactively, using black-box models to identify hateful content can perplex users as to why their posts were automatically flagged as hateful. On the other hand, proactive mitigation can be achieved by suggesting rephrasing before a post is made public. However, both mitigation techniques require information about which part of a post contains the hateful aspect, i.e., what spans within a text are responsible for conveying hate. Better detection of such spans can significantly reduce explicitly hateful content on the web. To further contribute to this research area, we organized HateNorm at HASOC-FIRE 2023, focusing on explicit span detection in English Tweets. A total of 12 teams participated in the competition, with the highest macro-F1 observed at 0.58.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2311.09834",
+          "pdf": "https://ceur-ws.org/Vol-3681/T6-3.pdf",
           "doi": "",
           "code": "",
-          "data": ""
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2311.09834"
         }
       },
       {
@@ -289,10 +296,13 @@
         "venue": "ICML 2023 - The Fortieth International Conference on Machine Learning",
         "abstract": "The Pythia suite was developed with the explicit purpose of enabling research in interpretability, learning dynamics, and ethics and transparency for which existing model suites were inadequate.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2304.01373",
-          "doi": "",
+          "pdf": "https://proceedings.mlr.press/v202/biderman23a/biderman23a.pdf",
+          "doi": "https://dl.acm.org/doi/10.5555/3618408.3618510",
           "code": "https://github.com/EleutherAI/pythia",
-          "data": ""
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2304.01373",
+          "video": "https://www.youtube.com/watch?v=4SSbQTEE8es",
+          "huggingface": "https://huggingface.co/collections/EleutherAI/pythia-scaling-suite-64fb5dfa8c21ebb3db7ad2e1"
         }
       },
       {
@@ -300,12 +310,13 @@
         "title": "The Art of Embedding Fusion: Optimizing Hate Speech Detection",
         "authors": "Mohammad Aflah Khan*, Neemesh Yadav*, Mohit Jain, Sanyam Goyal",
         "venue": "The First Tiny Papers Track at ICLR 2023",
-        "abstract": "We explore optimal strategies for embedding fusion in hate speech detection systems, demonstrating improved performance through novel combination techniques.",
+        "abstract": "Hate speech detection is a challenging natural language processing task that requires capturing linguistic and contextual nuances. Pre-trained language models (PLMs) offer rich semantic representations of text that can improve this task. However there is still limited knowledge about ways to effectively combine representations across PLMs and leverage their complementary strengths. In this work, we shed light on various combination techniques for several PLMs and comprehensively analyze their effectiveness. Our findings show that combining embeddings leads to slight improvements but at a high computational cost and the choice of combination has marginal effect on the final outcome.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2306.14939",
+          "pdf": "https://arxiv.org/pdf/2306.14939",
           "doi": "",
-          "code": "",
-          "data": ""
+          "code": "https://github.com/aflah02/The-Art-of-Embedding-Fusion-Optimizing-Hate-Speech-Detection",
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2306.14939"
         }
       },
       {
@@ -313,12 +324,12 @@
         "title": "Beyond Negativity: Re-Analysis and Follow-Up Experiments on Hope Speech Detection",
         "authors": "Neemesh Yadav*, Mohammad Aflah Khan*, Diksha Sethi, Raghav Sahni",
         "venue": "The First Tiny Papers Track at ICLR 2023",
-        "abstract": "We conduct re-analysis and follow-up experiments on hope speech detection, moving beyond simple negativity detection to understand positive discourse patterns.",
+        "abstract": "Health experts assert that hope plays a crucial role in enhancing individuals' physical and mental well-being, facilitating their recovery, and promoting restoration. Hope speech refers to comments, posts and other social media messages that offer support, reassurance, suggestions, inspiration, and insight. The detection of hope speech involves the analysis of such textual content, with the aim of identifying messages that invoke positive emotions in people. Our study aims to find computationally efficient yet comparable/superior methods for hope speech detection.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2306.01742",
+          "pdf": "https://arxiv.org/pdf/2306.01742",
           "doi": "",
-          "code": "",
-          "data": ""
+          "code": "https://github.com/aflah02/hope_speech_detection",
+          "arxiv": "https://arxiv.org/abs/2306.01742"
         }
       }
     ],
@@ -328,12 +339,13 @@
         "title": "Proactively Reducing the Hate Intensity of Online Posts via Hate Speech Normalization",
         "authors": "Sarah Masud, Manjot Bedi, Mohammad Aflah Khan, Md Shad Akhtar, Tanmoy Chakraborty",
         "venue": "KDD 2022 - Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
-        "abstract": "We propose a novel approach for proactively reducing hate intensity in online posts through hate speech normalization techniques, enabling more constructive online discourse.",
+        "abstract": "Curbing online hate speech has become the need of the hour; however, a blanket ban on such activities is infeasible for several geopolitical and cultural reasons. To reduce the severity of the problem, in this paper, we introduce a novel task, hate speech normalization, that aims to weaken the intensity of hatred exhibited by an online post. The intention of hate speech normalization is not to support hate but instead to provide the users with a stepping stone towards non-hate while giving online platforms more time to monitor any improvement in the user's behavior. To this end, we manually curated a parallel corpus - hate texts and their normalized counterparts (a normalized text is less hateful and more benign). We introduce NACL, a simple yet efficient hate speech normalization model that operates in three stages - first, it measures the hate intensity of the original sample; second, it identifies the hate span(s) within it; and finally, it reduces hate intensity by paraphrasing the hate spans. We perform extensive experiments to measure the efficacy of NACL via three-way evaluation (intrinsic, extrinsic, and human-study). We observe that NACL outperforms six baselines - NACL yields a score of 0.1365 RMSE for the intensity prediction, 0.622 F1-score in the span identification, and 82.27 BLEU and 80.05 perplexity for the normalized text generation. We further show the generalizability of NACL across other platforms (Reddit, Facebook, Gab). An interactive prototype of NACL was put together for the user study. Further, the tool is being deployed in a real-world setting at Wipro AI as a part of its mission to tackle harmful content on online platforms.",
         "links": {
-          "pdf": "https://arxiv.org/abs/2206.04007",
+          "pdf": "https://arxiv.org/pdf/2206.04007",
           "doi": "",
-          "code": "",
-          "data": ""
+          "code": "https://github.com/LCS2-IIITD/Hate_Norm",
+          "data": "",
+          "arxiv": "https://arxiv.org/abs/2206.04007"
         }
       }
     ]
