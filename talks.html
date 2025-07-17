@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks & Presentations - Your Name</title>
+    <link rel="icon" type="image/png" href="Assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="education.html" class="nav-link">Education & Career</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="talks.html" class="nav-link active">Talks</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="service.html" class="nav-link">Service</a>
+                <a href="awards.html" class="nav-link">Awards</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-title">Talks & Presentations</h1>
+                <p class="page-subtitle">
+                    A collection of my talks, presentations, and speaking engagements across conferences, workshops, and academic venues.
+                </p>
+            </div>
+        </header>
+        
+        <div class="container">
+            <!-- Talks Grid -->
+            <div class="talks-grid">
+                <div class="loading-message">
+                    <p>Loading talks...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="data-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('Loading talks page...');
+            
+            try {
+                const portfolioData = new PortfolioData();
+                const data = await portfolioData.loadData();
+                
+                if (data) {
+                    // Update personal information
+                    if (data.personal) {
+                        document.title = `Talks & Presentations - ${data.personal.name}`;
+                        const footerText = document.querySelector('.footer p');
+                        if (footerText) {
+                            footerText.innerHTML = `&copy; 2025 ${data.personal.name}. All rights reserved.`;
+                        }
+                    }
+                    
+                    // Load and display talks
+                    if (data.recent_updates) {
+                        const talks = data.recent_updates.filter(item => item.type === 'talks');
+                        console.log('Found talks:', talks.length);
+                        
+                        displayTalks(talks);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading talks:', error);
+            }
+        });
+
+        function displayTalks(talks) {
+            const talksGrid = document.querySelector('.talks-grid');
+            
+            if (talks.length === 0) {
+                talksGrid.innerHTML = '<div class="no-content"><p>No talks found.</p></div>';
+                return;
+            }
+
+            const talksHTML = talks.map(talk => {
+                const location = talk.location || '';
+                const date = formatDate(talk.date);
+                
+                return `
+                    <article class="talk-card">
+                        <div class="talk-header">
+                            <div class="talk-date">${date}</div>
+                        </div>
+                        <div class="talk-content">
+                            <h3 class="talk-title">${talk.title}</h3>
+                            ${location ? `<div class="talk-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>${location}</span>
+                            </div>` : ''}
+                            ${talk.description ? `<p class="talk-description">${talk.description}</p>` : ''}
+                            ${talk.links ? renderTalkLinks(talk.links) : ''}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            talksGrid.innerHTML = talksHTML;
+        }
+
+        function renderTalkLinks(links) {
+            const linkElements = [];
+            
+            if (links.slides) linkElements.push(`<a href="${links.slides}" class="talk-link" target="_blank"><i class="fas fa-presentation"></i> Slides</a>`);
+            if (links.video) linkElements.push(`<a href="${links.video}" class="talk-link" target="_blank"><i class="fas fa-video"></i> Video</a>`);
+            if (links.pdf) linkElements.push(`<a href="${links.pdf}" class="talk-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>`);
+            if (links.recording) linkElements.push(`<a href="${links.recording}" class="talk-link" target="_blank"><i class="fas fa-microphone"></i> Recording</a>`);
+            
+            return linkElements.length > 0 ? `<div class="talk-links">${linkElements.join('')}</div>` : '';
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'Date not specified';
+            
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) return dateString;
+            
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long'
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
