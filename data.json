@@ -241,6 +241,14 @@
       "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
     },
     {
+      "date": "Jan 2023",
+      "type": "talks",
+      "category": "Talks & Presentations",
+      "title": "Hands-on Workshop on Python Libraries for Machine Learning",
+      "description": "Co-instructed a hands-on workshop on Python libraries for machine learning at IIIT Delhi (Jointly organized by iHub Anubhuti & SBILab, ECE Department, IIIT Delhi).",
+      "tags": ["Pythia", "Goldman Sachs", "NLP", "Talk"]
+    },
+    {
       "date": "Aug 2022",
       "type": "papers",
       "category": "Papers & Publications",
